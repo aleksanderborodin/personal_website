@@ -7,21 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const nameEl = document.querySelector('.hero__name');
   if (nameEl) {
     const fx = new TextScramble(nameEl);
-    const lang = getPreferredLanguage();
+    const lang = document.documentElement.lang;
     const finalName = lang === 'ru' ? 'Александр Бородин' : 'Aleksander Borodin';
-
-    // Start with scramble
-    setTimeout(() => {
-      fx.setText(finalName);
-    }, 600);
-
-    // Re-scramble on language change
-    document.querySelectorAll('.lang-toggle__btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const newName = btn.dataset.lang === 'ru' ? 'Александр Бородин' : 'Aleksander Borodin';
-        fx.setText(newName);
-      });
-    });
+    setTimeout(() => { fx.setText(finalName); }, 600);
   }
 
   // --- Portal 3D tilt ---

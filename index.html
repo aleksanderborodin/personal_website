@@ -13,6 +13,11 @@
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <link rel="canonical" href="https://aleksanderborodin.github.io/">
 
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="en" href="https://aleksanderborodin.github.io/">
+  <link rel="alternate" hreflang="ru" href="https://aleksanderborodin.github.io/ru/">
+  <link rel="alternate" hreflang="x-default" href="https://aleksanderborodin.github.io/">
+
   <!-- Preload hero image for LCP -->
   <link rel="preload" as="image" href="assets/profile.webp" type="image/webp" fetchpriority="high">
 
@@ -134,8 +139,8 @@
       <li><a href="#professional" class="nav__link" data-i18n="nav_professional">Commercial</a></li>
       <li>
         <div class="lang-toggle">
-          <button class="lang-toggle__btn active" data-lang="en">EN</button>
-          <button class="lang-toggle__btn" data-lang="ru">RU</button>
+          <a class="lang-toggle__btn active" href="/">EN</a>
+          <a class="lang-toggle__btn" href="/ru/">RU</a>
         </div>
       </li>
     </ul>
@@ -264,7 +269,6 @@
           <p class="card__desc" data-i18n="sci_proj1_desc">Researched prefix attacks on LLMs inspired by BBC's Choice Blindness experiments. By simulating the start of a model's response to a forbidden query, models like Gemini 2.5 Pro and DeepSeek R1 were tricked into completing harmful answers — achieving near-100% success on MaliciousInstruct vs. near-zero baseline.</p>
           <div style="margin-top:0.75rem"><span class="card__tag">Python</span><span class="card__tag">LLM APIs</span><span class="card__tag">Prompt Engineering</span></div>
           <div style="display:flex;gap:1.25rem;flex-wrap:wrap;margin-top:0.5rem">
-            <a href="projects/prefix-injection.html" class="card__link"><span data-i18n="read_more">Read more</span> <span>&rarr;</span></a>
             <a href="https://github.com/aleksanderborodin/prefix_injection_jailbreak" target="_blank" rel="noopener" class="card__link"><span data-i18n="view_on_github">View on GitHub</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a>
           </div>
         </div>

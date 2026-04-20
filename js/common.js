@@ -1,38 +1,6 @@
 /* ============================================
-   COMMON JS — Nav, i18n, Scroll Effects
+   COMMON JS — Nav, Scroll Effects
    ============================================ */
-
-// --- i18n ---
-function getPreferredLanguage() {
-  const stored = localStorage.getItem('lang');
-  if (stored && translations[stored]) return stored;
-  const browserLang = navigator.language.slice(0, 2);
-  if (translations[browserLang]) return browserLang;
-  return 'en';
-}
-
-function setLanguage(lang) {
-  localStorage.setItem('lang', lang);
-  document.documentElement.lang = lang;
-
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (translations[lang] && translations[lang][key]) {
-      el.textContent = translations[lang][key];
-    }
-  });
-
-  document.querySelectorAll('[data-i18n-html]').forEach(el => {
-    const key = el.getAttribute('data-i18n-html');
-    if (translations[lang] && translations[lang][key]) {
-      el.innerHTML = translations[lang][key];
-    }
-  });
-
-  document.querySelectorAll('.lang-toggle__btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.lang === lang);
-  });
-}
 
 // --- Scroll Reveal (IntersectionObserver) ---
 function initScrollReveal() {
@@ -172,15 +140,6 @@ function initPageLoad() {
 
 // --- Initialize everything on DOM ready ---
 document.addEventListener('DOMContentLoaded', () => {
-  // Set language
-  const lang = getPreferredLanguage();
-  setLanguage(lang);
-
-  // Language toggle handlers
-  document.querySelectorAll('.lang-toggle__btn').forEach(btn => {
-    btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
-  });
-
   // Init all modules
   initNavScroll();
   initMobileNav();
