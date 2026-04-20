@@ -31,7 +31,7 @@ const translations = {
     portal_professional_cta: "View Experience",
 
     // Scientist page
-    sci_hero_title: "LLM Safety Research",
+    sci_hero_title: "LLM Safety Research & NLP",
     sci_hero_desc: "Exploring the boundaries of language model safety, knowledge extraction, and applied NLP. Every experiment is a question — every result, a new direction.",
     sci_label: "Research Projects",
 
@@ -68,7 +68,7 @@ const translations = {
     contrib_github_cta: "View on GitHub",
 
     // Professional page
-    prof_hero_title: "Professional Work",
+    prof_hero_title: "ML Engineering & AI Development",
     prof_hero_desc: "Delivering measurable business impact through AI, optimization, and data engineering. Building systems that generate real value.",
     prof_label: "Experience",
 

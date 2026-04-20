@@ -92,6 +92,19 @@
   }
   </script>
 
+  <!-- JSON-LD ProfilePage schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "@id": "https://aleksanderborodin.github.io/ru/#profilepage",
+    "url": "https://aleksanderborodin.github.io/ru/",
+    "name": "Александр Бородин — Портфолио",
+    "inLanguage": "ru",
+    "mainEntity": { "@id": "https://aleksanderborodin.github.io/#person" }
+  }
+  </script>
+
   <!-- JSON-LD WebSite schema -->
   <script type="application/ld+json">
   {
@@ -155,7 +168,7 @@
       <div class="hero__content">
         <div class="hero__text">
           <p class="hero__greeting">Привет, я</p>
-          <h1 class="hero__name">Александр Бородин<span class="sr-only"> — NLP &amp; AI разработчик, исследователь безопасности LLM</span></h1>
+          <h1 class="hero__name">Александр Бородин<span style="display:block;font-size:1.05rem;font-weight:400;opacity:0.55;margin-top:0.35em;letter-spacing:0.02em"> — NLP/AI разработчик &amp; исследователь безопасности LLM</span></h1>
           <p class="hero__role">NLP / AI Разработчик</p>
           <p class="hero__intro">Студент МФТИ на стыке математики, машинного обучения и неугасимого интереса к тому, как думают языковые модели — и как их взламывать.</p>
 
@@ -267,7 +280,7 @@
       </div>
 
       <div class="reveal">
-        <div class="card stagger" style="max-width:720px;margin:0 auto">
+        <div class="card stagger" style="max-width:720px">
           <h3 class="card__title">Prefix Injection Jailbreak</h3>
           <p class="card__desc">Исследование префиксных атак на LLM, вдохновлённое экспериментами BBC по Choice Blindness. Имитируя начало ответа модели на запрещённый запрос, модели Gemini 2.5 Pro и DeepSeek R1 давали вредоносные ответы — почти 100% успех на MaliciousInstruct против нулевого базового уровня.</p>
           <div style="margin-top:0.75rem"><span class="card__tag">Python</span><span class="card__tag">LLM APIs</span><span class="card__tag">Prompt Engineering</span></div>
@@ -289,9 +302,9 @@
         <div class="card stagger">
           <span class="section-header__label">Достижения</span>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;margin-top:0.5rem">
-            <li style="font-size:0.92rem;color:var(--text-secondary);padding-left:1.2rem;position:relative"><span style="position:absolute;left:0;top:7px;width:7px;height:7px;border-radius:50%;background:var(--accent-scientist);opacity:0.6"></span> Победитель — Международная экспериментальная олимпиада по физике (IEPhO), 2023</li>
-            <li style="font-size:0.92rem;color:var(--text-secondary);padding-left:1.2rem;position:relative"><span style="position:absolute;left:0;top:7px;width:7px;height:7px;border-radius:50%;background:var(--accent-scientist);opacity:0.6"></span> Призёр — Всероссийская олимпиада по физике, 10 класс (2022) и 11 класс (2023)</li>
-            <li style="font-size:0.92rem;color:var(--text-secondary);padding-left:1.2rem;position:relative"><span style="position:absolute;left:0;top:7px;width:7px;height:7px;border-radius:50%;background:var(--accent-scientist);opacity:0.6"></span> Победитель — командные Wiki-гонки, Сириус, 2023</li>
+            <li style="font-size:0.92rem;color:var(--text-secondary);padding-left:1.2rem;position:relative"><span style="position:absolute;left:0;top:7px;width:7px;height:7px;border-radius:50%;background:var(--accent-scientist);opacity:0.6"></span> Победитель — <a href="https://iepho.ru/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;opacity:0.85">Международная экспериментальная олимпиада по физике (IEPhO)</a>, 2023</li>
+            <li style="font-size:0.92rem;color:var(--text-secondary);padding-left:1.2rem;position:relative"><span style="position:absolute;left:0;top:7px;width:7px;height:7px;border-radius:50%;background:var(--accent-scientist);opacity:0.6"></span> Призёр — <a href="https://vos.olimpiada.ru/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;opacity:0.85">Всероссийская олимпиада по физике</a>, 10 класс (2022) и 11 класс (2023)</li>
+            <li style="font-size:0.92rem;color:var(--text-secondary);padding-left:1.2rem;position:relative"><span style="position:absolute;left:0;top:7px;width:7px;height:7px;border-radius:50%;background:var(--accent-scientist);opacity:0.6"></span> Победитель — командные Wiki-гонки, <a href="https://sochisirius.ru/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;opacity:0.85">Сириус</a>, 2023</li>
           </ul>
         </div>
       </div>
@@ -464,7 +477,7 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="../js/common.js"></script>
-  <script src="../js/landing.js"></script>
+  <script src="../js/common.js" defer></script>
+  <script src="../js/landing.js" defer></script>
 </body>
 </html>

@@ -91,6 +91,19 @@
   }
   </script>
 
+  <!-- JSON-LD ProfilePage schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "@id": "https://aleksanderborodin.github.io/#profilepage",
+    "url": "https://aleksanderborodin.github.io/",
+    "name": "Aleksander Borodin — Portfolio",
+    "inLanguage": "en",
+    "mainEntity": { "@id": "https://aleksanderborodin.github.io/#person" }
+  }
+  </script>
+
   <!-- JSON-LD WebSite schema -->
   <script type="application/ld+json">
   {
@@ -154,7 +167,7 @@
       <div class="hero__content">
         <div class="hero__text">
           <p class="hero__greeting" data-i18n="landing_greeting">Hello, I'm</p>
-          <h1 class="hero__name">Aleksander Borodin<span class="sr-only"> — NLP &amp; AI Developer, LLM Safety Researcher</span></h1>
+          <h1 class="hero__name">Aleksander Borodin<span style="display:block;font-size:1.05rem;font-weight:400;opacity:0.55;margin-top:0.35em;letter-spacing:0.02em"> — NLP/AI Developer &amp; LLM Safety Researcher</span></h1>
           <p class="hero__role" data-i18n="landing_role">NLP / AI Developer</p>
           <p class="hero__intro" data-i18n="landing_intro">MIPT student blending mathematics, machine learning, and a relentless curiosity for how language models think — and how to break them.</p>
 
@@ -261,12 +274,12 @@
     <div class="container">
       <div class="section-header reveal">
         <span class="section-header__label" data-i18n="sci_label">Research Projects</span>
-        <h2 class="section-header__title" data-i18n="sci_hero_title">Research & Science</h2>
+        <h2 class="section-header__title" data-i18n="sci_hero_title">LLM Safety Research & NLP</h2>
         <p class="section-header__desc" data-i18n="sci_hero_desc">Exploring the boundaries of language model safety, knowledge extraction, and applied NLP. Every experiment is a question — every result, a new direction.</p>
       </div>
 
       <div class="reveal">
-        <div class="card stagger" style="max-width:720px;margin:0 auto">
+        <div class="card stagger" style="max-width:720px">
           <h3 class="card__title" data-i18n="sci_proj1_title">Prefix Injection Jailbreak</h3>
           <p class="card__desc" data-i18n="sci_proj1_desc">Researched prefix attacks on LLMs inspired by BBC's Choice Blindness experiments. By simulating the start of a model's response to a forbidden query, models like Gemini 2.5 Pro and DeepSeek R1 were tricked into completing harmful answers — achieving near-100% success on MaliciousInstruct vs. near-zero baseline.</p>
           <div style="margin-top:0.75rem"><span class="card__tag">Python</span><span class="card__tag">LLM APIs</span><span class="card__tag">Prompt Engineering</span></div>
@@ -288,9 +301,9 @@
         <div class="card stagger">
           <span class="section-header__label" data-i18n="sci_achievements_label">Achievements</span>
           <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;margin-top:0.5rem">
-            <li style="font-size:0.92rem;color:var(--text-secondary);padding-left:1.2rem;position:relative"><span style="position:absolute;left:0;top:7px;width:7px;height:7px;border-radius:50%;background:var(--accent-scientist);opacity:0.6"></span> <span data-i18n="sci_achievement_1">Winner — International Experimental Physics Olympiad (IEPhO), 2023</span></li>
-            <li style="font-size:0.92rem;color:var(--text-secondary);padding-left:1.2rem;position:relative"><span style="position:absolute;left:0;top:7px;width:7px;height:7px;border-radius:50%;background:var(--accent-scientist);opacity:0.6"></span> <span data-i18n="sci_achievement_2">Prize-winner — All-Russian Physics Olympiad, Grade 10 (2022) & Grade 11 (2023)</span></li>
-            <li style="font-size:0.92rem;color:var(--text-secondary);padding-left:1.2rem;position:relative"><span style="position:absolute;left:0;top:7px;width:7px;height:7px;border-radius:50%;background:var(--accent-scientist);opacity:0.6"></span> <span data-i18n="sci_achievement_3">Winner — Team Wiki-races, Sirius, 2023</span></li>
+            <li style="font-size:0.92rem;color:var(--text-secondary);padding-left:1.2rem;position:relative"><span style="position:absolute;left:0;top:7px;width:7px;height:7px;border-radius:50%;background:var(--accent-scientist);opacity:0.6"></span> <span data-i18n="sci_achievement_1">Winner — <a href="https://iepho.ru/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;opacity:0.85">International Experimental Physics Olympiad (IEPhO)</a>, 2023</span></li>
+            <li style="font-size:0.92rem;color:var(--text-secondary);padding-left:1.2rem;position:relative"><span style="position:absolute;left:0;top:7px;width:7px;height:7px;border-radius:50%;background:var(--accent-scientist);opacity:0.6"></span> <span data-i18n="sci_achievement_2">Prize-winner — <a href="https://vos.olimpiada.ru/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;opacity:0.85">All-Russian Physics Olympiad</a>, Grade 10 (2022) &amp; Grade 11 (2023)</span></li>
+            <li style="font-size:0.92rem;color:var(--text-secondary);padding-left:1.2rem;position:relative"><span style="position:absolute;left:0;top:7px;width:7px;height:7px;border-radius:50%;background:var(--accent-scientist);opacity:0.6"></span> <span data-i18n="sci_achievement_3">Winner — Team Wiki-races, <a href="https://sochisirius.ru/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;opacity:0.85">Sirius</a>, 2023</span></li>
           </ul>
         </div>
       </div>
@@ -358,7 +371,7 @@
     <div class="container">
       <div class="section-header reveal">
         <span class="section-header__label" style="--accent:var(--accent-professional);color:var(--accent-professional)" data-i18n="prof_label">Experience</span>
-        <h2 class="section-header__title" data-i18n="prof_hero_title">Professional Work</h2>
+        <h2 class="section-header__title" data-i18n="prof_hero_title">ML Engineering & AI Development</h2>
         <p class="section-header__desc" data-i18n="prof_hero_desc">Delivering measurable business impact through AI, optimization, and data engineering. Building systems that generate real value.</p>
       </div>
 
@@ -463,8 +476,7 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="js/i18n.js"></script>
-  <script src="js/common.js"></script>
-  <script src="js/landing.js"></script>
+  <script src="js/common.js" defer></script>
+  <script src="js/landing.js" defer></script>
 </body>
 </html>
