@@ -171,9 +171,9 @@ const translations = {
     ie_tagline: "Autonomous framework where specialized Claude agents work in parallel across generations and build a shared knowledge base that gets smarter every generation — no human in the loop.",
 
     ie_section_result: "Headline result",
-    ie_result_heading: "Sidon set: 66 → 89 in 7 autonomous generations",
-    ie_result_unit: "elements · +35% vs. baseline",
-    ie_result_body: "<strong>Problem:</strong> find the largest B<sub>2</sub> sequence (Sidon set) in <code>{0..10000}</code>.<br><strong>Greedy baseline:</strong> 66 elements.<br><strong>After 7 generations of autonomous agent work:</strong> 89 elements. Theoretical target ≈ 100.",
+    ie_result_heading: "Sidon set: 66 → 105 in 7 autonomous generations",
+    ie_result_unit: "elements · +59% vs. baseline",
+    ie_result_body: "<strong>Problem:</strong> find the largest B<sub>2</sub> sequence (Sidon set) in <code>{0..10000}</code>.<br><strong>Greedy baseline:</strong> 66 elements.<br><strong>After 7 generations of autonomous agent work:</strong> 105 elements — past the classical √N ≈ 100 reference.",
     ie_result_caption: "Dashboard Overview tab — score progression, generation timeline, and key metrics across a run.",
 
     ie_section_problem: "Problem",
@@ -408,9 +408,9 @@ const translations = {
     ie_tagline: "Автономный фреймворк, где специализированные агенты Claude работают параллельно по поколениям и строят общую базу знаний, которая умнеет с каждым поколением — без человека в цикле.",
 
     ie_section_result: "Главный результат",
-    ie_result_heading: "Множество Сидона: 66 → 89 за 7 автономных поколений",
-    ie_result_unit: "элементов · +35% к baseline",
-    ie_result_body: "<strong>Задача:</strong> найти наибольшую B<sub>2</sub>-последовательность (множество Сидона) в <code>{0..10000}</code>.<br><strong>Жадный baseline:</strong> 66 элементов.<br><strong>После 7 поколений автономной работы агентов:</strong> 89 элементов. Теоретический предел ≈ 100.",
+    ie_result_heading: "Множество Сидона: 66 → 105 за 7 автономных поколений",
+    ie_result_unit: "элементов · +59% к baseline",
+    ie_result_body: "<strong>Задача:</strong> найти наибольшую B<sub>2</sub>-последовательность (множество Сидона) в <code>{0..10000}</code>.<br><strong>Жадный baseline:</strong> 66 элементов.<br><strong>После 7 поколений автономной работы агентов:</strong> 105 элементов — выше классического ориентира √N ≈ 100.",
     ie_result_caption: "Вкладка Overview в дашборде — прогресс скоров, таймлайн поколений и ключевые метрики за прогон.",
 
     ie_section_problem: "Проблема",
