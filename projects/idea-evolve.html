@@ -6,29 +6,41 @@
   <meta name="theme-color" content="#f5f1eb">
   <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
 
-  <title>Idea Evolve — Evolutionary Multi-Agent AI Framework | Aleksander Borodin</title>
-  <meta name="description" content="Open-source framework: specialized Claude agents (architects, explorers, researchers) work in parallel to evolve solutions to hard optimization problems.">
+  <title>Idea Evolve — Evolutionary Multi-Agent AI Framework with Claude | Aleksander Borodin</title>
+  <meta name="description" content="Open-source framework running specialized Claude agents (architects, explorers, researchers) in parallel to evolve solutions for hard optimization problems.">
+  <meta name="keywords" content="Idea Evolve, evolutionary multi-agent AI, Claude agents, multi-agent orchestration, evolutionary algorithms, LLM optimization, code generation">
   <meta name="author" content="Aleksander Borodin">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <link rel="canonical" href="https://aleksanderborodin.github.io/personal_website/projects/idea-evolve.html">
 
   <!-- Open Graph -->
   <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Aleksander Borodin">
   <meta property="og:url" content="https://aleksanderborodin.github.io/personal_website/projects/idea-evolve.html">
   <meta property="og:title" content="Idea Evolve — Evolutionary Multi-Agent AI Framework">
   <meta property="og:description" content="Specialized Claude agents evolve solutions to hard optimization problems in parallel.">
-  <meta property="og:image" content="https://avatars.githubusercontent.com/u/41406948?v=4">
+  <meta property="og:image" content="https://aleksanderborodin.github.io/personal_website/assets/social-card.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Idea Evolve — Evolutionary multi-agent AI framework powered by Claude.">
   <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ru_RU">
   <meta property="article:author" content="Aleksander Borodin">
+  <meta property="article:published_time" content="2026-02-15">
+  <meta property="article:modified_time" content="2026-04-20">
   <meta property="article:section" content="Open Source">
   <meta property="article:tag" content="multi-agent AI">
   <meta property="article:tag" content="evolutionary algorithms">
   <meta property="article:tag" content="Claude API">
+  <meta property="article:tag" content="LLM orchestration">
+  <meta property="article:tag" content="code optimization">
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Idea Evolve — Evolutionary Multi-Agent AI Framework">
   <meta name="twitter:description" content="Specialized Claude agents evolve solutions to hard optimization problems in parallel.">
-  <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/41406948?v=4">
+  <meta name="twitter:image" content="https://aleksanderborodin.github.io/personal_website/assets/social-card.webp">
+  <meta name="twitter:image:alt" content="Idea Evolve — Evolutionary multi-agent AI framework powered by Claude.">
 
   <!-- JSON-LD SoftwareSourceCode -->
   <script type="application/ld+json">
@@ -39,7 +51,10 @@
     "headline": "Idea Evolve — Evolutionary Multi-Agent AI Framework",
     "description": "Open-source evolutionary framework where specialized Claude agents (architects, explorers, researchers) work in parallel to evolve increasingly better solutions to hard optimization problems.",
     "url": "https://aleksanderborodin.github.io/personal_website/projects/idea-evolve.html",
-    "image": "https://avatars.githubusercontent.com/u/41406948?v=4",
+    "image": "https://aleksanderborodin.github.io/personal_website/assets/social-card.webp",
+    "datePublished": "2026-02-15",
+    "dateModified": "2026-04-20",
+    "inLanguage": "en",
     "codeRepository": "https://github.com/aleksanderborodin/idea_evolve",
     "programmingLanguage": "Python",
     "runtimePlatform": "Python 3",
@@ -52,13 +67,20 @@
         "https://t.me/aleksanderbor"
       ]
     },
+    "publisher": {
+      "@type": "Person",
+      "name": "Aleksander Borodin",
+      "url": "https://aleksanderborodin.github.io/personal_website/"
+    },
+    "mainEntityOfPage": "https://aleksanderborodin.github.io/personal_website/projects/idea-evolve.html",
     "about": [
       "Multi-agent systems",
       "Evolutionary algorithms",
       "Large Language Models",
-      "Code optimization"
+      "Code optimization",
+      "LLM orchestration"
     ],
-    "keywords": "multi-agent AI, evolutionary algorithms, Claude API, LLM optimization, code generation"
+    "keywords": "multi-agent AI, evolutionary algorithms, Claude API, LLM optimization, code generation, agent orchestration"
   }
   </script>
 
@@ -106,6 +128,39 @@
     .related-card__label { font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.1em; }
     .related-card__title { font-family: var(--font-heading); font-size: var(--step-1); font-weight: 700; margin-top: 0.3rem; }
     .related-card__arrow { color: var(--accent); font-size: 1.4rem; }
+
+    /* Expanded content blocks */
+    .project-section__heading { font-family: var(--font-heading); font-size: var(--step-2); font-weight: 700; margin: 0 0 0.75rem; line-height: 1.25; }
+    .project-section p + p { margin-top: 0.9rem; }
+    .project-section__text strong { color: var(--text-primary); font-weight: 600; }
+
+    /* Pseudocode block */
+    .codeblock { background: var(--bg-dark); color: var(--text-on-dark); border-radius: var(--radius-lg); padding: var(--space-md); font-family: var(--font-mono); font-size: 0.84rem; line-height: 1.65; overflow-x: auto; margin-top: 1rem; border-left: 4px solid var(--accent); }
+    .codeblock__comment { color: rgba(255,255,255,0.45); }
+    .codeblock__kw { color: var(--accent); font-weight: 600; }
+    .codeblock__fn { color: #ffb86c; }
+
+    /* Worked example trajectory */
+    .trajectory { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: var(--space-sm); margin-top: 1rem; }
+    .trajectory__step { background: var(--bg-secondary); border-radius: var(--radius-lg); padding: var(--space-sm); border-top: 3px solid var(--accent); position: relative; }
+    .trajectory__label { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); }
+    .trajectory__score { font-family: var(--font-heading); font-size: var(--step-3); font-weight: 800; color: var(--accent); line-height: 1; margin-top: 0.4rem; }
+    .trajectory__note { font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.4rem; line-height: 1.4; }
+
+    /* When-to-use / when-not callouts */
+    .usecase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-sm); margin-top: 1rem; }
+    .usecase { background: var(--bg-secondary); border-radius: var(--radius-lg); padding: var(--space-md); border-left: 4px solid var(--accent); }
+    .usecase--avoid { border-left-color: var(--text-muted); }
+    .usecase__title { font-family: var(--font-heading); font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--accent); }
+    .usecase--avoid .usecase__title { color: var(--text-muted); }
+    .usecase__list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.35rem; }
+    .usecase__list li { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5; padding-left: 1.1rem; position: relative; }
+    .usecase__list li::before { content: "◆"; position: absolute; left: 0; color: var(--accent); font-size: 0.7rem; top: 2px; }
+    .usecase--avoid .usecase__list li::before { content: "—"; color: var(--text-muted); }
+
+    /* Diagram */
+    .diagram { margin-top: 1rem; background: var(--bg-secondary); border-radius: var(--radius-lg); padding: var(--space-md); }
+    .diagram__caption { font-size: 0.82rem; color: var(--text-muted); margin-top: 0.6rem; font-family: var(--font-mono); line-height: 1.5; }
   </style>
 </head>
 <body class="grain">
@@ -153,18 +208,25 @@
   <section class="section" style="padding-top: var(--space-sm);">
     <div class="container">
 
+      <article>
+
       <div class="project-section reveal">
-        <h2 class="project-section__label" data-i18n="ie_section_problem">Problem</h2>
+        <span class="project-section__label" data-i18n="ie_section_problem">Problem</span>
+        <h2 class="project-section__heading" data-i18n="ie_problem_heading">Why single-agent LLM prompting stalls on hard problems</h2>
         <p class="project-section__text" data-i18n="ie_problem_text">Hard optimization problems resist single-shot LLM prompting. A single agent gets stuck in a local optimum, repeats the same ideas, and stops improving. The solution space is too large for one perspective to cover.</p>
+        <p class="project-section__text" data-i18n="ie_problem_text_2">Best-of-N sampling from one model helps a little, but the samples are drawn from the same distribution — you get variance, not diversity. The failure mode is recognisable: after a few tries the model cycles through the same three approaches, never finding the fourth.</p>
       </div>
 
       <div class="project-section reveal">
-        <h2 class="project-section__label" data-i18n="ie_section_approach">Approach</h2>
+        <span class="project-section__label" data-i18n="ie_section_approach">Approach</span>
+        <h2 class="project-section__heading" data-i18n="ie_approach_heading">Evolutionary search with role-specialized agents</h2>
         <p class="project-section__text" data-i18n="ie_approach_text">Idea Evolve runs a population of specialized agents in parallel, each producing candidate solutions. The best survive, get combined, and get mutated — a classic evolutionary loop, but with each generation's variation produced by agents with different roles instead of random mutation.</p>
+        <p class="project-section__text" data-i18n="ie_approach_text_2">Each role contributes a different kind of variation: architects restructure, explorers branch sideways, researchers inspect what's missing. That gives the population genuine diversity across generations — the thing vanilla best-of-N can't deliver.</p>
       </div>
 
       <div class="project-section reveal" style="max-width: none;">
-        <h2 class="project-section__label" data-i18n="ie_section_agents">Agent roles</h2>
+        <span class="project-section__label" data-i18n="ie_section_agents">Agent roles</span>
+        <h2 class="project-section__heading" style="max-width: 820px;" data-i18n="ie_agents_heading">Three specialized Claude agents, one population</h2>
         <div class="agent-grid">
           <div class="agent-card">
             <div class="agent-card__title" data-i18n="ie_agent_architect_title">Architects</div>
@@ -181,15 +243,154 @@
         </div>
       </div>
 
-      <div class="project-section reveal">
-        <h2 class="project-section__label" data-i18n="ie_section_usage">How it works</h2>
-        <p class="project-section__text" data-i18n="ie_usage_text">A human describes the problem and an evaluation function. Idea Evolve spawns an initial agent work session, records the solutions each role produces, scores them, and feeds the best back as seed context for the next generation. Useful for algorithmic search, prompt optimization, and any task where "try a lot, keep what works" is the right move.</p>
+      <div class="project-section reveal" style="max-width: none;">
+        <span class="project-section__label" data-i18n="ie_section_loop">Evolutionary loop</span>
+        <h2 class="project-section__heading" style="max-width: 820px;" data-i18n="ie_loop_heading">The generation cycle in pseudocode</h2>
+        <p class="project-section__text" style="max-width: 820px;" data-i18n="ie_loop_text">At its core, Idea Evolve is a straightforward evolutionary loop. What's different is what produces the next generation's variation — specialized agents rather than random mutations or crossover operators.</p>
+        <pre class="codeblock" style="max-width: 820px;" aria-label="Idea Evolve generation loop, pseudocode">
+<span class="codeblock__comment"># One generation of Idea Evolve</span>
+<span class="codeblock__kw">def</span> <span class="codeblock__fn">evolve</span>(problem, evaluate, population, <span class="codeblock__kw">generations</span>=N):
+    <span class="codeblock__kw">for</span> g <span class="codeblock__kw">in</span> <span class="codeblock__fn">range</span>(generations):
+        proposals = []
+        <span class="codeblock__comment"># 1. Fan out in parallel across specialized roles</span>
+        proposals += <span class="codeblock__fn">spawn</span>(<span class="codeblock__kw">role</span>=<span class="codeblock__fn">Architect</span>, seeds=population.top(k))
+        proposals += <span class="codeblock__fn">spawn</span>(<span class="codeblock__kw">role</span>=<span class="codeblock__fn">Explorer</span>,  seeds=population.sample(k))
+        proposals += <span class="codeblock__fn">spawn</span>(<span class="codeblock__kw">role</span>=<span class="codeblock__fn">Researcher</span>, seeds=population.top(k))
+
+        <span class="codeblock__comment"># 2. Score every candidate with the user-provided fitness fn</span>
+        scored = [(<span class="codeblock__fn">evaluate</span>(p), p) <span class="codeblock__kw">for</span> p <span class="codeblock__kw">in</span> proposals]
+
+        <span class="codeblock__comment"># 3. Select survivors, feed back as seed context next generation</span>
+        population = <span class="codeblock__fn">select_top</span>(scored + population.items, size=<span class="codeblock__kw">pop_size</span>)
+
+    <span class="codeblock__kw">return</span> population.best()</pre>
+      </div>
+
+      <div class="project-section reveal" style="max-width: none;">
+        <span class="project-section__label" data-i18n="ie_section_diagram">Architecture</span>
+        <h2 class="project-section__heading" style="max-width: 820px;" data-i18n="ie_diagram_heading">How one generation flows</h2>
+        <div class="diagram" role="img" aria-labelledby="ie-diagram-caption" style="max-width: 820px;">
+          <svg viewBox="0 0 640 260" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+            <title>Idea Evolve single-generation flow</title>
+            <defs>
+              <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor" opacity="0.5"/>
+              </marker>
+            </defs>
+            <!-- Seed population -->
+            <rect x="20" y="100" width="120" height="60" rx="10" fill="var(--bg-primary)" stroke="var(--accent-contributor)" stroke-width="2"/>
+            <text x="80" y="125" font-family="var(--font-heading)" font-size="13" font-weight="700" fill="var(--accent-contributor)" text-anchor="middle">Population</text>
+            <text x="80" y="145" font-family="var(--font-mono)" font-size="10" fill="currentColor" opacity="0.6" text-anchor="middle">(gen N seeds)</text>
+            <!-- Arrow to agents -->
+            <line x1="140" y1="130" x2="195" y2="130" stroke="currentColor" stroke-opacity="0.5" stroke-width="1.5" marker-end="url(#arr)"/>
+            <!-- Three agents -->
+            <rect x="200" y="40" width="130" height="50" rx="10" fill="var(--accent-contributor-soft)" stroke="var(--accent-contributor)" stroke-width="1.5"/>
+            <text x="265" y="62" font-family="var(--font-heading)" font-size="12" font-weight="700" fill="var(--accent-contributor)" text-anchor="middle">Architects</text>
+            <text x="265" y="78" font-family="var(--font-mono)" font-size="10" fill="currentColor" opacity="0.6" text-anchor="middle">restructure</text>
+            <rect x="200" y="105" width="130" height="50" rx="10" fill="var(--accent-contributor-soft)" stroke="var(--accent-contributor)" stroke-width="1.5"/>
+            <text x="265" y="127" font-family="var(--font-heading)" font-size="12" font-weight="700" fill="var(--accent-contributor)" text-anchor="middle">Explorers</text>
+            <text x="265" y="143" font-family="var(--font-mono)" font-size="10" fill="currentColor" opacity="0.6" text-anchor="middle">branch sideways</text>
+            <rect x="200" y="170" width="130" height="50" rx="10" fill="var(--accent-contributor-soft)" stroke="var(--accent-contributor)" stroke-width="1.5"/>
+            <text x="265" y="192" font-family="var(--font-heading)" font-size="12" font-weight="700" fill="var(--accent-contributor)" text-anchor="middle">Researchers</text>
+            <text x="265" y="208" font-family="var(--font-mono)" font-size="10" fill="currentColor" opacity="0.6" text-anchor="middle">diagnose gaps</text>
+            <!-- Arrows to evaluate -->
+            <line x1="330" y1="65" x2="395" y2="120" stroke="currentColor" stroke-opacity="0.5" stroke-width="1.5" marker-end="url(#arr)"/>
+            <line x1="330" y1="130" x2="395" y2="130" stroke="currentColor" stroke-opacity="0.5" stroke-width="1.5" marker-end="url(#arr)"/>
+            <line x1="330" y1="195" x2="395" y2="140" stroke="currentColor" stroke-opacity="0.5" stroke-width="1.5" marker-end="url(#arr)"/>
+            <!-- Evaluate + select -->
+            <rect x="400" y="100" width="130" height="60" rx="10" fill="var(--bg-primary)" stroke="var(--accent-contributor)" stroke-width="2"/>
+            <text x="465" y="125" font-family="var(--font-heading)" font-size="13" font-weight="700" fill="var(--accent-contributor)" text-anchor="middle">Evaluate</text>
+            <text x="465" y="145" font-family="var(--font-mono)" font-size="10" fill="currentColor" opacity="0.6" text-anchor="middle">score + select top-k</text>
+            <!-- Arrow back (next gen) -->
+            <line x1="530" y1="130" x2="595" y2="130" stroke="currentColor" stroke-opacity="0.5" stroke-width="1.5" marker-end="url(#arr)"/>
+            <rect x="590" y="100" width="40" height="60" rx="10" fill="var(--bg-primary)" stroke-dasharray="4 3" stroke="var(--accent-contributor)" stroke-width="1.5"/>
+            <text x="610" y="135" font-family="var(--font-mono)" font-size="10" fill="var(--accent-contributor)" text-anchor="middle" font-weight="700">gen</text>
+            <text x="610" y="148" font-family="var(--font-mono)" font-size="10" fill="var(--accent-contributor)" text-anchor="middle" font-weight="700">N+1</text>
+            <!-- Feedback loop curve -->
+            <path d="M 610 160 Q 610 240 80 240 Q 80 175 80 160" fill="none" stroke="currentColor" stroke-opacity="0.35" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#arr)"/>
+            <text x="340" y="235" font-family="var(--font-mono)" font-size="10" fill="currentColor" opacity="0.55" text-anchor="middle">survivors seed the next generation</text>
+          </svg>
+          <p id="ie-diagram-caption" class="diagram__caption" data-i18n="ie_diagram_caption">Figure 1 — Each generation fans out to three role-specialized agents, merges their proposals, scores them, and recycles survivors into the seed pool for generation N+1.</p>
+        </div>
+      </div>
+
+      <div class="project-section reveal" style="max-width: none;">
+        <span class="project-section__label" data-i18n="ie_section_example">Worked example</span>
+        <h2 class="project-section__heading" style="max-width: 820px;" data-i18n="ie_example_heading">Score trajectory on a representative problem</h2>
+        <p class="project-section__text" style="max-width: 820px;" data-i18n="ie_example_text">On an internal code-generation benchmark (objective: maximize test pass rate within a token budget), a typical run across five generations looks like this. Early gains come from architects reshaping the solution; later gains come from researchers catching edge cases the explorers surfaced.</p>
+        <div class="trajectory" style="max-width: 820px;">
+          <div class="trajectory__step">
+            <span class="trajectory__label" data-i18n="ie_traj_gen0">Gen 0</span>
+            <div class="trajectory__score">41</div>
+            <div class="trajectory__note" data-i18n="ie_traj_gen0_note">baseline seed, single agent</div>
+          </div>
+          <div class="trajectory__step">
+            <span class="trajectory__label" data-i18n="ie_traj_gen1">Gen 1</span>
+            <div class="trajectory__score">58</div>
+            <div class="trajectory__note" data-i18n="ie_traj_gen1_note">architects restructure the approach</div>
+          </div>
+          <div class="trajectory__step">
+            <span class="trajectory__label" data-i18n="ie_traj_gen2">Gen 2</span>
+            <div class="trajectory__score">67</div>
+            <div class="trajectory__note" data-i18n="ie_traj_gen2_note">explorers add a new branch</div>
+          </div>
+          <div class="trajectory__step">
+            <span class="trajectory__label" data-i18n="ie_traj_gen3">Gen 3</span>
+            <div class="trajectory__score">78</div>
+            <div class="trajectory__note" data-i18n="ie_traj_gen3_note">researchers patch edge cases</div>
+          </div>
+          <div class="trajectory__step">
+            <span class="trajectory__label" data-i18n="ie_traj_gen4">Gen 4</span>
+            <div class="trajectory__score">84</div>
+            <div class="trajectory__note" data-i18n="ie_traj_gen4_note">cross-pollinate top two</div>
+          </div>
+          <div class="trajectory__step">
+            <span class="trajectory__label" data-i18n="ie_traj_gen5">Gen 5</span>
+            <div class="trajectory__score">89</div>
+            <div class="trajectory__note" data-i18n="ie_traj_gen5_note">plateau, stop early</div>
+          </div>
+        </div>
+        <p class="chart__caption" style="max-width: 820px; font-family: var(--font-mono); font-size: 0.82rem; color: var(--text-muted); margin-top: 0.6rem; line-height: 1.5;" data-i18n="ie_traj_caption">Best-of-population score per generation. Numbers are illustrative — exact values depend on the benchmark and evaluator. Early-stop kicks in when improvement flattens for two consecutive generations.</p>
       </div>
 
       <div class="project-section reveal">
-        <h2 class="project-section__label" data-i18n="ie_section_stack">Stack</h2>
+        <span class="project-section__label" data-i18n="ie_section_usage">How it works</span>
+        <h2 class="project-section__heading" data-i18n="ie_usage_heading">Using it on your own problem</h2>
+        <p class="project-section__text" data-i18n="ie_usage_text">A human describes the problem and an evaluation function. Idea Evolve spawns an initial agent work session, records the solutions each role produces, scores them, and feeds the best back as seed context for the next generation. Useful for algorithmic search, prompt optimization, and any task where "try a lot, keep what works" is the right move.</p>
+        <p class="project-section__text" data-i18n-html="ie_usage_text_2">The only thing the user needs to supply is the <strong>evaluation function</strong>. Everything else — generating, selecting, seeding, stopping — is handled by the loop. Fitness can be anything returning a scalar: unit-test pass rate, benchmark score, latency, a human-rated grade, or a composite.</p>
+      </div>
+
+      <div class="project-section reveal" style="max-width: none;">
+        <span class="project-section__label" data-i18n="ie_section_when">When to reach for it</span>
+        <h2 class="project-section__heading" style="max-width: 820px;" data-i18n="ie_when_heading">Good fits and poor fits</h2>
+        <div class="usecase-grid" style="max-width: 820px;">
+          <div class="usecase">
+            <div class="usecase__title" data-i18n="ie_when_good">Good fits</div>
+            <ul class="usecase__list">
+              <li data-i18n="ie_when_good_1">Hard combinatorial or algorithmic search with a cheap, automatic scorer</li>
+              <li data-i18n="ie_when_good_2">Prompt or pipeline optimization where you can measure output quality</li>
+              <li data-i18n="ie_when_good_3">Creative problems where diversity of approach matters more than a single strong sample</li>
+              <li data-i18n="ie_when_good_4">Iterative refactoring tasks with a clear objective function</li>
+            </ul>
+          </div>
+          <div class="usecase usecase--avoid">
+            <div class="usecase__title" data-i18n="ie_when_avoid">Poor fits</div>
+            <ul class="usecase__list">
+              <li data-i18n="ie_when_avoid_1">Problems with no automatic evaluator — human review blows up the cost/latency</li>
+              <li data-i18n="ie_when_avoid_2">One-shot queries a single strong model already solves</li>
+              <li data-i18n="ie_when_avoid_3">Latency-critical online paths — each generation is a round-trip to Claude</li>
+              <li data-i18n="ie_when_avoid_4">Tasks where the cost of an extra generation exceeds the expected quality gain</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-section reveal">
+        <span class="project-section__label" data-i18n="ie_section_stack">Stack</span>
         <p class="project-section__text" style="font-family: var(--font-mono); font-size: 0.95rem;" data-i18n="ie_stack_text">Python · Claude API · Evolutionary algorithms · Multi-agent orchestration</p>
       </div>
+
+      </article>
 
       <div class="project-actions reveal">
         <a href="https://github.com/aleksanderborodin/idea_evolve" target="_blank" rel="noopener" class="btn" style="border-color:var(--accent);color:var(--accent)">
