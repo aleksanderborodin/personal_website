@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#f5f1eb">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 
   <title>404 — Page Not Found | Aleksander Borodin</title>
   <meta name="robots" content="noindex, follow">
@@ -15,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Epilogue:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="/css/common.css">
 
   <style>
     .not-found {
@@ -30,24 +30,31 @@
       z-index: 2;
     }
 
-    /* Three-accent gradient — ties all three site identities together */
+    /* Massive, confident typographic treatment — solid dark, no gradient */
     .not-found__code {
       font-family: var(--font-heading);
       font-weight: 800;
       font-size: clamp(6rem, 22vw, 15rem);
       line-height: 0.9;
       letter-spacing: -0.05em;
-      background: linear-gradient(
-        125deg,
-        var(--accent-scientist) 10%,
-        var(--accent-contributor) 52%,
-        var(--accent-professional) 92%
-      );
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: var(--text-primary);
       user-select: none;
       margin-bottom: var(--space-sm);
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 0.04em;
+    }
+
+    /* Tiny mono annotation next to 404 — editorial, not gimmicky */
+    .not-found__code-tag {
+      font-family: var(--font-mono);
+      font-weight: 500;
+      font-size: 0.11em;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      align-self: flex-start;
+      margin-top: 0.5em;
     }
 
     /* Neutral mono badge — no arbitrary accent color */
@@ -278,7 +285,9 @@
   </nav>
 
   <main class="not-found">
-    <div class="not-found__code" aria-hidden="true">404</div>
+    <div class="not-found__code" aria-hidden="true">
+      404<span class="not-found__code-tag">ERR_NO_ROUTE</span>
+    </div>
 
     <span class="not-found__label">Page not found</span>
     <h1 class="not-found__title">This page doesn't exist</h1>
@@ -329,7 +338,7 @@
         </a>
       </li>
       <li>
-        <a href="projects/idea-evolve.html">
+        <a href="/projects/idea-evolve.html">
           <span class="dot" style="background:var(--accent-contributor)"></span>
           Idea Evolve
         </a>
@@ -361,6 +370,6 @@
     </div>
   </footer>
 
-  <script src="js/common.js" defer></script>
+  <script src="/js/common.js" defer></script>
 </body>
 </html>
