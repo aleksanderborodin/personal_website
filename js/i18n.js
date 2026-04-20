@@ -31,7 +31,7 @@ const translations = {
     portal_professional_cta: "View Experience",
 
     // Scientist page
-    sci_hero_title: "Research & Science",
+    sci_hero_title: "LLM Safety Research",
     sci_hero_desc: "Exploring the boundaries of language model safety, knowledge extraction, and applied NLP. Every experiment is a question — every result, a new direction.",
     sci_label: "Research Projects",
 
@@ -198,7 +198,7 @@ const translations = {
     portal_professional_cta: "Опыт работы",
 
     // Scientist page
-    sci_hero_title: "Наука и исследования",
+    sci_hero_title: "Исследования безопасности LLM",
     sci_hero_desc: "Исследование границ безопасности языковых моделей, извлечения знаний и прикладного NLP. Каждый эксперимент — это вопрос, каждый результат — новое направление.",
     sci_label: "Исследовательские проекты",
 
