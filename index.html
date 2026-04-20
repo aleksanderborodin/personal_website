@@ -6,8 +6,22 @@
   <meta name="theme-color" content="#f5f1eb">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
+  <!-- Language auto-redirect: send Russian-language browsers to /ru/ -->
+  <script>
+    (function() {
+      var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      if (lang === 'ru' || lang.startsWith('ru-')) {
+        // Only redirect if not already redirected (avoid loops via sessionStorage)
+        if (!sessionStorage.getItem('lang-redirected')) {
+          sessionStorage.setItem('lang-redirected', '1');
+          window.location.replace('/ru/');
+        }
+      }
+    })();
+  </script>
+
   <title>Aleksander Borodin — NLP/AI Developer & LLM Safety Researcher</title>
-  <meta name="description" content="NLP/AI developer Aleksander Borodin — MIPT researcher of LLM jailbreaks, open-source AI tool builder, and production ML engineer. See projects →">
+  <meta name="description" content="NLP/AI developer Aleksander Borodin — MIPT researcher, ~100% jailbreak success rate on Gemini 2.5 Pro, open-source AI tools builder. See projects →">
   <meta name="keywords" content="Aleksander Borodin, NLP developer, LLM safety, jailbreak research, MIPT, prefix injection, multi-agent AI, RAG">
   <meta name="author" content="Aleksander Borodin">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
