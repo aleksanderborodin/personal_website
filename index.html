@@ -3,8 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aleksander Borodin — NLP / AI Developer</title>
-  <meta name="description" content="Personal portfolio of Aleksander Borodin — NLP/AI Developer, researcher, and open-source contributor.">
+
+  <title>Aleksander Borodin — NLP/AI Developer & LLM Researcher</title>
+  <meta name="description" content="Personal portfolio of Aleksander Borodin — NLP/AI developer and MIPT student. LLM safety research, open-source AI tools, and commercial ML work.">
+  <meta name="author" content="Aleksander Borodin">
+  <link rel="canonical" href="https://aleksanderborodin.github.io/personal_website/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://aleksanderborodin.github.io/personal_website/">
+  <meta property="og:title" content="Aleksander Borodin — NLP/AI Developer & LLM Researcher">
+  <meta property="og:description" content="NLP/AI developer and MIPT student. LLM safety research, open-source AI tools, and commercial ML work.">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/41406948?v=4">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ru_RU">
+  <meta property="profile:first_name" content="Aleksander">
+  <meta property="profile:last_name" content="Borodin">
+  <meta property="profile:username" content="aleksanderborodin">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Aleksander Borodin — NLP/AI Developer & LLM Researcher">
+  <meta name="twitter:description" content="NLP/AI developer and MIPT student. LLM safety research, open-source AI tools, and commercial ML work.">
+  <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/41406948?v=4">
+
+  <!-- JSON-LD Person schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Aleksander Borodin",
+    "alternateName": "Александр Бородин",
+    "url": "https://aleksanderborodin.github.io/personal_website/",
+    "image": "https://avatars.githubusercontent.com/u/41406948?v=4",
+    "jobTitle": "NLP / AI Developer",
+    "description": "NLP/AI developer and LLM safety researcher at MIPT, building open-source AI tools and commercial ML systems.",
+    "email": "apdorodin765@gmail.com",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Moscow Institute of Physics and Technology",
+      "sameAs": "https://en.wikipedia.org/wiki/Moscow_Institute_of_Physics_and_Technology"
+    },
+    "knowsAbout": [
+      "Natural Language Processing",
+      "Large Language Models",
+      "LLM Safety",
+      "Jailbreaking Research",
+      "Machine Learning",
+      "Retrieval-Augmented Generation",
+      "Python"
+    ],
+    "sameAs": [
+      "https://github.com/aleksanderborodin",
+      "https://t.me/aleksanderbor"
+    ]
+  }
+  </script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +80,7 @@
 
   <!-- Navigation -->
   <nav class="nav">
-    <a href="#" class="nav__logo">
+    <a href="#home" class="nav__logo">
       <span class="nav__logo-dot"></span>
       <span data-i18n="logo_text">AB</span>
     </a>
@@ -73,7 +127,7 @@
 
         <div class="hero__photo-wrapper">
           <div class="hero__photo-ring" aria-hidden="true"></div>
-          <img src="https://avatars.githubusercontent.com/u/41406948?v=4" alt="Aleksander Borodin" class="hero__photo" width="286" height="286">
+          <img src="https://avatars.githubusercontent.com/u/41406948?v=4" alt="Aleksander Borodin — NLP/AI developer, MIPT" class="hero__photo" width="286" height="286">
           <span class="hero__photo-label">FPMI MIPT '27</span>
         </div>
       </div>
@@ -165,12 +219,21 @@
         <p class="section-header__desc" data-i18n="sci_hero_desc">Exploring the boundaries of language model safety, knowledge extraction, and applied NLP. Every experiment is a question — every result, a new direction.</p>
       </div>
 
-      <div class="reveal">
-        <div class="card" style="max-width:900px">
+      <div class="grid-2 reveal">
+        <div class="card stagger">
           <h4 class="card__title" data-i18n="sci_proj1_title">Prefix Injection Jailbreak</h4>
           <p class="card__desc" data-i18n="sci_proj1_desc">Researched prefix attacks on LLMs inspired by BBC's Choice Blindness experiments. By simulating the start of a model's response to a forbidden query, models like Gemini 2.5 Pro and DeepSeek R1 were tricked into completing harmful answers — achieving near-100% success on MaliciousInstruct vs. near-zero baseline.</p>
           <div style="margin-top:0.75rem"><span class="card__tag">Python</span><span class="card__tag">LLM APIs</span><span class="card__tag">Prompt Engineering</span></div>
-          <a href="https://github.com/aleksanderborodin/prefix_injection_jailbreak" target="_blank" rel="noopener" class="card__link"><span data-i18n="view_on_github">View on GitHub</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a>
+          <div style="display:flex;gap:1.25rem;flex-wrap:wrap;margin-top:0.5rem">
+            <a href="projects/prefix-injection.html" class="card__link"><span data-i18n="read_more">Read more</span> <span>&rarr;</span></a>
+            <a href="https://github.com/aleksanderborodin/prefix_injection_jailbreak" target="_blank" rel="noopener" class="card__link"><span data-i18n="view_on_github">View on GitHub</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a>
+          </div>
+        </div>
+        <div class="card stagger">
+          <h4 class="card__title" data-i18n="sci_proj2_title">Edu Parser — Knowledge Graph Extraction</h4>
+          <p class="card__desc" data-i18n="sci_proj2_desc">Built a system that parses lecture notes into entities and infers prerequisite relationships using BM25, embeddings, and LLM-based verification. Applied to 2 years of MIPT math notes — became the foundation for a flashcard-based lifelong learning app.</p>
+          <div style="margin-top:0.75rem"><span class="card__tag">Python</span><span class="card__tag">BM25</span><span class="card__tag">Embeddings</span><span class="card__tag">NetworkX</span></div>
+          <a href="https://github.com/aleksanderborodin/edu_parser" target="_blank" rel="noopener" class="card__link"><span data-i18n="view_on_github">View on GitHub</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a>
         </div>
       </div>
 
@@ -218,7 +281,10 @@
           <h4 class="card__title" data-i18n="contrib_proj1_title">Idea Evolve</h4>
           <p class="card__desc" data-i18n="contrib_proj1_desc">Evolutionary code optimization through collaborative AI agent work sessions. Multiple specialized Claude agents (architects, explorers, researchers) work in parallel to evolve increasingly better solutions to hard optimization problems.</p>
           <div style="margin-top:0.75rem"><span class="card__tag" style="background:var(--accent-contributor-soft);color:var(--accent-contributor)">Python</span><span class="card__tag" style="background:var(--accent-contributor-soft);color:var(--accent-contributor)">Claude API</span><span class="card__tag" style="background:var(--accent-contributor-soft);color:var(--accent-contributor)">Evolutionary</span></div>
-          <a href="https://github.com/aleksanderborodin/idea_evolve" target="_blank" rel="noopener" class="card__link" style="color:var(--accent-contributor)"><span data-i18n="view_on_github">View on GitHub</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a>
+          <div style="display:flex;gap:1.25rem;flex-wrap:wrap;margin-top:0.5rem">
+            <a href="projects/idea-evolve.html" class="card__link" style="color:var(--accent-contributor)"><span data-i18n="read_more">Read more</span> <span>&rarr;</span></a>
+            <a href="https://github.com/aleksanderborodin/idea_evolve" target="_blank" rel="noopener" class="card__link" style="color:var(--accent-contributor)"><span data-i18n="view_on_github">View on GitHub</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a>
+          </div>
         </div>
         <div class="card stagger">
           <h4 class="card__title" data-i18n="contrib_proj2_title">Yoola Explain</h4>
@@ -231,6 +297,18 @@
           <p class="card__desc" data-i18n="contrib_proj3_desc">Open-source system for automatic analysis of educational content — extracting knowledge entities and prerequisite relationships from lecture materials using NLP and vector embeddings.</p>
           <div style="margin-top:0.75rem"><span class="card__tag" style="background:var(--accent-contributor-soft);color:var(--accent-contributor)">Python</span><span class="card__tag" style="background:var(--accent-contributor-soft);color:var(--accent-contributor)">BM25</span></div>
           <a href="https://github.com/aleksanderborodin/edu_parser" target="_blank" rel="noopener" class="card__link" style="color:var(--accent-contributor)">GitHub <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a>
+        </div>
+        <div class="card stagger">
+          <h4 class="card__title" data-i18n="contrib_proj4_title">Medic</h4>
+          <p class="card__desc" data-i18n="contrib_proj4_desc">Telegram bot that orchestrates a group of AI agents working together. Open-source framework for multi-agent collaboration via messaging.</p>
+          <div style="margin-top:0.75rem"><span class="card__tag" style="background:var(--accent-contributor-soft);color:var(--accent-contributor)">Python</span><span class="card__tag" style="background:var(--accent-contributor-soft);color:var(--accent-contributor)">Telegram</span><span class="card__tag" style="background:var(--accent-contributor-soft);color:var(--accent-contributor)">AI Agents</span></div>
+          <a href="https://github.com/aleksanderborodin/medic" target="_blank" rel="noopener" class="card__link" style="color:var(--accent-contributor)">GitHub <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a>
+        </div>
+        <div class="card stagger">
+          <h4 class="card__title" data-i18n="contrib_proj5_title">Flash Cards</h4>
+          <p class="card__desc" data-i18n="contrib_proj5_desc">A flashcard-based learning application designed for spaced repetition and knowledge retention.</p>
+          <div style="margin-top:0.75rem"><span class="card__tag" style="background:var(--accent-contributor-soft);color:var(--accent-contributor)">Python</span></div>
+          <a href="https://github.com/aleksanderborodin/Flash-Cards" target="_blank" rel="noopener" class="card__link" style="color:var(--accent-contributor)">GitHub <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg></a>
         </div>
       </div>
 
@@ -311,6 +389,10 @@
         <div class="card stagger">
           <div style="font-family:var(--font-heading);font-size:0.9rem;font-weight:700;color:var(--accent-professional);margin-bottom:0.4rem" data-i18n="prof_skill_backend">Backend</div>
           <div style="font-size:0.92rem;color:var(--text-secondary);line-height:1.6" data-i18n="prof_skill_backend_val">FastAPI · LangChain · LangGraph</div>
+        </div>
+        <div class="card stagger">
+          <div style="font-family:var(--font-heading);font-size:0.9rem;font-weight:700;color:var(--accent-professional);margin-bottom:0.4rem" data-i18n="prof_skill_systems">Systems</div>
+          <div style="font-size:0.92rem;color:var(--text-secondary);line-height:1.6" data-i18n="prof_skill_systems_val">Linux (home server admin, workstation usage)</div>
         </div>
       </div>
 
