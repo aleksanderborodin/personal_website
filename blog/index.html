@@ -12,6 +12,43 @@
   <link rel="alternate" hreflang="en" href="https://aleksanderborodin.github.io/blog/">
   <link rel="alternate" hreflang="ru" href="https://aleksanderborodin.github.io/ru/blog/">
   <link rel="alternate" hreflang="x-default" href="https://aleksanderborodin.github.io/blog/">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Aleksander Borodin">
+  <meta property="og:url" content="https://aleksanderborodin.github.io/blog/">
+  <meta property="og:title" content="Writing — Aleksander Borodin">
+  <meta property="og:description" content="Long-form notes on LLM evaluation, embedded AI, and the economics of picking models for production. By Aleksander Borodin.">
+  <meta property="og:image" content="https://aleksanderborodin.github.io/assets/social-card.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Writing — Aleksander Borodin. Notes on LLMs, evaluation, and AI in production.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ru_RU">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@aleksanderbor">
+  <meta name="twitter:creator" content="@aleksanderbor">
+  <meta name="twitter:title" content="Writing — Aleksander Borodin">
+  <meta name="twitter:description" content="Notes on LLM evaluation, model economics, and AI in production.">
+  <meta name="twitter:image" content="https://aleksanderborodin.github.io/assets/social-card.webp">
+
+  <!-- JSON-LD Blog -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": "https://aleksanderborodin.github.io/blog/",
+    "name": "Writing — Aleksander Borodin",
+    "description": "Long-form notes on LLM evaluation, embedded AI, and the economics of picking models for production.",
+    "url": "https://aleksanderborodin.github.io/blog/",
+    "inLanguage": "en",
+    "author": { "@id": "https://aleksanderborodin.github.io/#person" },
+    "publisher": { "@id": "https://aleksanderborodin.github.io/#person" }
+  }
+  </script>
 
   <!-- Fonts: reuse site fonts + add Fraunces for long-form reading -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,7 +95,7 @@
         Long-form analysis on picking models for production, embedded AI feasibility, and the quiet parts of LLM behavior no benchmark captures. Written slowly; updated when I'm wrong.
       </p>
       <div class="blog-masthead__meta">
-        <span>1 post · EN + RU</span>
+        <span>5 posts · EN + RU</span>
         <span style="color: var(--accent-writer);">Available for AI consulting — apdorodin765@gmail.com</span>
       </div>
     </header>
@@ -71,8 +108,17 @@
           <a class="start-here__item" href="pareto-llm-pricing.html">
             <span class="start-here__num">01</span>
             <span class="start-here__text">
-              <strong>The Pareto front of LLM pricing has moved to Haiku 4.5.</strong>
-              <span> — cost-per-correct-answer across 12 tasks; why "cheapest" is usually wrong.</span>
+              <strong>Most LLMs are strictly dominated.</strong>
+              <span> — intelligence vs. price across hundreds of models; the Pareto frontier and the four that actually matter.</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a class="start-here__item" href="llms-not-just-statistics.html">
+            <span class="start-here__num">02</span>
+            <span class="start-here__text">
+              <strong>The "LLMs are just statistics" argument is stuck in 2022.</strong>
+              <span> — a timeline of the key architectural shifts that took LLMs past next-token prediction.</span>
             </span>
           </a>
         </li>
@@ -85,13 +131,59 @@
       <li class="year-break"><span>2026</span></li>
 
       <li>
-        <a class="post-entry" href="pareto-llm-pricing.html">
-          <div class="post-entry__date">Mar 14 &nbsp;· &nbsp;2026</div>
+        <a class="post-entry" href="cli-vs-mcp.html">
+          <div class="post-entry__date">Mar 22 &nbsp;· &nbsp;2026</div>
           <div class="post-entry__body">
-            <div class="post-entry__title">The Pareto front of LLM pricing has moved to <em>Haiku 4.5</em>.</div>
-            <div class="post-entry__desc">Running twelve production-shaped tasks against eight frontier models, measured not by benchmark score but by cost-per-correct-answer. The winner isn't what you think.</div>
+            <div class="post-entry__title">Agents don't need MCP. They need <em>CLI</em>.</div>
+            <div class="post-entry__desc">An agent with a shell can use any CLI. MCP was a detour. Why plain command-line tools are the simpler, better default for agentic systems.</div>
           </div>
-          <div class="post-entry__meta">12 min <span class="post-entry__lang-pill post-entry__lang-pill--both">EN · RU</span></div>
+          <div class="post-entry__meta">2 min <span class="post-entry__lang-pill post-entry__lang-pill--both">EN · RU</span></div>
+        </a>
+      </li>
+
+      <li>
+        <a class="post-entry" href="pareto-llm-pricing.html">
+          <div class="post-entry__date">Jan 26 &nbsp;· &nbsp;2026</div>
+          <div class="post-entry__body">
+            <div class="post-entry__title">Most LLMs are <em>strictly dominated</em>.</div>
+            <div class="post-entry__desc">Plotting intelligence vs price for hundreds of LLMs shows most are strictly dominated. Here is the Pareto frontier and the four models that matter.</div>
+          </div>
+          <div class="post-entry__meta">3 min <span class="post-entry__lang-pill post-entry__lang-pill--both">EN · RU</span></div>
+        </a>
+      </li>
+
+      <li class="year-break"><span>2025</span></li>
+
+      <li>
+        <a class="post-entry" href="llms-trained-to-guess.html">
+          <div class="post-entry__date">Sep 08 &nbsp;· &nbsp;2025</div>
+          <div class="post-entry__body">
+            <div class="post-entry__title">LLMs are trained to <em>guess</em>.</div>
+            <div class="post-entry__desc">OpenAI's hallucination research in one sentence: LLMs never say "I don't know" because post-training never rewards it. And that's fixable cheaply.</div>
+          </div>
+          <div class="post-entry__meta">3 min <span class="post-entry__lang-pill post-entry__lang-pill--both">EN · RU</span></div>
+        </a>
+      </li>
+
+      <li>
+        <a class="post-entry" href="prefix-injection-jailbreak.html">
+          <div class="post-entry__date">Aug 14 &nbsp;· &nbsp;2025</div>
+          <div class="post-entry__body">
+            <div class="post-entry__title">A psychology trick beats <em>LLM jailbreak defenses</em>.</div>
+            <div class="post-entry__desc">A 2008 BBC Choice Blindness setup, reshaped as a prefix-injection jailbreak against top LLMs. Tested on 20 MaliciousInstruct prompts.</div>
+          </div>
+          <div class="post-entry__meta">2 min <span class="post-entry__lang-pill post-entry__lang-pill--both">EN · RU</span></div>
+        </a>
+      </li>
+
+      <li>
+        <a class="post-entry" href="llms-not-just-statistics.html">
+          <div class="post-entry__date">Aug 10 &nbsp;· &nbsp;2025</div>
+          <div class="post-entry__body">
+            <div class="post-entry__title">The <em>"LLMs are just statistics"</em> argument is stuck in 2022.</div>
+            <div class="post-entry__desc">A timeline of architectural and training-recipe changes since 2020 that pushed LLMs past next-token prediction.</div>
+          </div>
+          <div class="post-entry__meta">4 min <span class="post-entry__lang-pill post-entry__lang-pill--both">EN · RU</span></div>
         </a>
       </li>
 

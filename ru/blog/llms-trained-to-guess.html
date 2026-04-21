@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f1eb">
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+
+  <title>Угадайка — Александр Бородин</title>
+  <meta name="description" content="Исследование OpenAI о галлюцинациях в одну фразу: LLM учат играть в угадайку. И это дёшево чинится.">
+  <link rel="canonical" href="https://aleksanderborodin.github.io/ru/blog/llms-trained-to-guess.html">
+  <link rel="alternate" hreflang="en" href="https://aleksanderborodin.github.io/blog/llms-trained-to-guess.html">
+  <link rel="alternate" hreflang="ru" href="https://aleksanderborodin.github.io/ru/blog/llms-trained-to-guess.html">
+  <link rel="alternate" hreflang="x-default" href="https://aleksanderborodin.github.io/blog/llms-trained-to-guess.html">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Александр Бородин">
+  <meta property="og:title" content="Угадайка">
+  <meta property="og:description" content="Исследование OpenAI о галлюцинациях в одну фразу: LLM учат играть в угадайку.">
+  <meta property="og:url" content="https://aleksanderborodin.github.io/ru/blog/llms-trained-to-guess.html">
+  <meta property="og:image" content="https://aleksanderborodin.github.io/assets/social-card.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@aleksanderbor">
+  <meta name="twitter:creator" content="@aleksanderbor">
+  <meta name="twitter:title" content="Угадайка">
+  <meta name="twitter:description" content="Исследование OpenAI о галлюцинациях в одну фразу: LLM учат играть в угадайку.">
+  <meta name="twitter:image" content="https://aleksanderborodin.github.io/assets/social-card.webp">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://aleksanderborodin.github.io/ru/blog/llms-trained-to-guess.html",
+    "headline": "Угадайка",
+    "description": "Исследование OpenAI о галлюцинациях в одну фразу: LLM учат играть в угадайку. И это дёшево чинится.",
+    "url": "https://aleksanderborodin.github.io/ru/blog/llms-trained-to-guess.html",
+    "datePublished": "2025-09-08",
+    "author": { "@id": "https://aleksanderborodin.github.io/#person" },
+    "publisher": { "@id": "https://aleksanderborodin.github.io/#person" },
+    "inLanguage": "ru",
+    "image": "https://aleksanderborodin.github.io/assets/social-card.webp",
+    "isPartOf": { "@type": "Blog", "url": "https://aleksanderborodin.github.io/ru/blog/" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://aleksanderborodin.github.io/ru/" },
+      { "@type": "ListItem", "position": 2, "name": "Блог", "item": "https://aleksanderborodin.github.io/ru/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Угадайка", "item": "https://aleksanderborodin.github.io/ru/blog/llms-trained-to-guess.html" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700&family=Epilogue:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&display=swap">
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/blog.css">
+</head>
+<body class="page-blog">
+
+  <nav class="nav">
+    <a href="/ru/" class="nav__logo"><span class="nav__logo-dot"></span><span>АБ</span></a>
+    <button class="nav__hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
+    <ul class="nav__links">
+      <li><a href="/ru/#scientist" class="nav__link">Наука</a></li>
+      <li><a href="/ru/#contributor" class="nav__link">Open Source</a></li>
+      <li><a href="/ru/#professional" class="nav__link">Коммерция</a></li>
+      <li><a href="/ru/blog/" class="nav__link" style="color: var(--accent-writer);">Блог</a></li>
+      <li>
+        <div class="lang-toggle">
+          <a class="lang-toggle__btn" href="/blog/llms-trained-to-guess.html">EN</a>
+          <a class="lang-toggle__btn active" href="/ru/blog/llms-trained-to-guess.html">RU</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="article-wrap">
+    <article class="article">
+
+      <div class="article__eyebrow"><a href="/ru/blog/">← Блог</a></div>
+
+      <h1 class="article__title">Угадайка.</h1>
+
+      <div class="article__meta">
+        <span><strong>08.09.2025</strong></span>
+        <span>3 мин чтения</span>
+        <a class="lang-link" href="/blog/llms-trained-to-guess.html">Read in English →</a>
+      </div>
+
+      <div class="prose">
+
+        <p>Нейросети иногда галлюцинируют (уверенно выдают неверный ответ). При этом почти никогда они не говорят, что не знают, хотя могут. Можно подумать, что дело в предобучении, где есть недостоверные данные или просто underfitting ввиду недостаточного размера модели или обучающей выборки (даже абсолютно верной). Но это не то, что влияет на галлюцинации на практике.</p>
+
+        <p>OpenAI опубликовали <a href="https://cdn.openai.com/pdf/d04913be-3f6f-4d2b-b283-ff432ef4aaa5/why-language-models-hallucinate.pdf">исследование</a>, вывод которого можно сформулировать так: <strong>LLM учат играть в угадайку.</strong> На этапе постобучения ответы LLM проверяют на то, верны ли они, не разделяя между ответом «модель не знает» и просто неверным ответом, а потому она учится отвечать наиболее правдоподобным способом — ведь может повезти. Примерно как любой человек на вопросе с выбором ответа, только нейросеть не знает, отвечает она на тесте или реальному пользователю.</p>
+
+        <p>С этим знанием теперь можно добавить ещё один этап постобучения, на котором меньше наказывать модель за ответ «не знаю». Можно также сделать несколько версий модели на базе уже существующей (изменив только постобучение) с разной необходимой степенью уверенности перед ответом. И ведь так можно дообучить уже существующие LLM куда дешевле, чем создавать новые. Гениальное открытие.</p>
+
+        <p>Мне это исследование намекнуло на идею, что и с развёрнутостью ответа может происходить подобная ситуация. Куда проще быть правым, когда твой ответ не развёрнут, и нейросеть учится достаточному уровню для того, чтобы проходить все тесты на этапе RL — и ни чуточку больше, даже когда пользователю этого хотелось бы. И опять можно давать модели баллы на этапе RL не только за правильный ответ, но и за то, насколько его развёрнутость близка к оптимальной для вопроса. Вероятно, есть другие важные параметры, за которые можно также награждать модель.</p>
+
+        <p>Переформулирую на язык классического ML:</p>
+
+        <blockquote>Accuracy — плохая метрика для LLM.</blockquote>
+
+        <p>Я описал только базовую идею. В самом исследовании много других интересных экспериментальных наблюдений по теме, которые указывают, как пост-трейнинг в некоторых аспектах «портит» модель.</p>
+
+      </div>
+
+      <aside class="post-cta">
+        <span class="post-cta__label">— Консультации</span>
+        Если вы проектируете RL-ревард или протоколы оценки для LLM и хотите второго взгляда на то, что пост-тренинг на самом деле оптимизирует — консультирую. <a href="mailto:apdorodin765@gmail.com">apdorodin765@gmail.com</a>.
+      </aside>
+
+      <nav class="post-nav" aria-label="Навигация по постам">
+        <a class="post-nav__link post-nav__link--prev" href="prefix-injection-jailbreak.html">
+          <span class="post-nav__label">← Раньше</span>
+          <span class="post-nav__title">Префиксная атака</span>
+        </a>
+        <a class="post-nav__link post-nav__link--next" href="pareto-llm-pricing.html">
+          <span class="post-nav__label">Позже →</span>
+          <span class="post-nav__title">Какие LLM имеют смысл</span>
+        </a>
+      </nav>
+
+    </article>
+  </div>
+
+  <div class="blog-container">
+    <footer class="blog-footer">
+      <div><a href="/ru/">← aleksanderborodin.github.io/ru</a></div>
+      <div style="display: flex; gap: 1.25rem;">
+        <a href="https://github.com/aleksanderborodin">GitHub</a>
+        <a href="https://t.me/less_arrogant">Telegram</a>
+        <a href="mailto:apdorodin765@gmail.com">Email</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../../js/common.js"></script>
+</body>
+</html>

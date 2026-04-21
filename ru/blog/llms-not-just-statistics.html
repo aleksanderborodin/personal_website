@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f1eb">
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+
+  <title>Не просто статистика — Александр Бородин</title>
+  <meta name="description" content="Таймлайн архитектурных и тренировочных изменений с 2020-го, который вывел LLM за рамки предсказания следующего токена.">
+  <link rel="canonical" href="https://aleksanderborodin.github.io/ru/blog/llms-not-just-statistics.html">
+  <link rel="alternate" hreflang="en" href="https://aleksanderborodin.github.io/blog/llms-not-just-statistics.html">
+  <link rel="alternate" hreflang="ru" href="https://aleksanderborodin.github.io/ru/blog/llms-not-just-statistics.html">
+  <link rel="alternate" hreflang="x-default" href="https://aleksanderborodin.github.io/blog/llms-not-just-statistics.html">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Александр Бородин">
+  <meta property="og:title" content="Не просто статистика">
+  <meta property="og:description" content="Таймлайн архитектурных и тренировочных изменений с 2020-го, который вывел LLM за рамки предсказания следующего токена.">
+  <meta property="og:url" content="https://aleksanderborodin.github.io/ru/blog/llms-not-just-statistics.html">
+  <meta property="og:image" content="https://aleksanderborodin.github.io/assets/social-card.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@aleksanderbor">
+  <meta name="twitter:creator" content="@aleksanderbor">
+  <meta name="twitter:title" content="Не просто статистика">
+  <meta name="twitter:description" content="Таймлайн архитектурных и тренировочных изменений с 2020-го.">
+  <meta name="twitter:image" content="https://aleksanderborodin.github.io/assets/social-card.webp">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://aleksanderborodin.github.io/ru/blog/llms-not-just-statistics.html",
+    "headline": "Не просто статистика",
+    "description": "Таймлайн архитектурных и тренировочных изменений с 2020-го, который вывел LLM за рамки предсказания следующего токена.",
+    "url": "https://aleksanderborodin.github.io/ru/blog/llms-not-just-statistics.html",
+    "datePublished": "2025-08-10",
+    "author": { "@id": "https://aleksanderborodin.github.io/#person" },
+    "publisher": { "@id": "https://aleksanderborodin.github.io/#person" },
+    "inLanguage": "ru",
+    "image": "https://aleksanderborodin.github.io/assets/social-card.webp",
+    "isPartOf": { "@type": "Blog", "url": "https://aleksanderborodin.github.io/ru/blog/" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://aleksanderborodin.github.io/ru/" },
+      { "@type": "ListItem", "position": 2, "name": "Блог", "item": "https://aleksanderborodin.github.io/ru/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Не просто статистика", "item": "https://aleksanderborodin.github.io/ru/blog/llms-not-just-statistics.html" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700&family=Epilogue:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&display=swap">
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/blog.css">
+</head>
+<body class="page-blog">
+
+  <nav class="nav">
+    <a href="/ru/" class="nav__logo"><span class="nav__logo-dot"></span><span>АБ</span></a>
+    <button class="nav__hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
+    <ul class="nav__links">
+      <li><a href="/ru/#scientist" class="nav__link">Наука</a></li>
+      <li><a href="/ru/#contributor" class="nav__link">Open Source</a></li>
+      <li><a href="/ru/#professional" class="nav__link">Коммерция</a></li>
+      <li><a href="/ru/blog/" class="nav__link" style="color: var(--accent-writer);">Блог</a></li>
+      <li>
+        <div class="lang-toggle">
+          <a class="lang-toggle__btn" href="/blog/llms-not-just-statistics.html">EN</a>
+          <a class="lang-toggle__btn active" href="/ru/blog/llms-not-just-statistics.html">RU</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="article-wrap">
+    <article class="article">
+
+      <div class="article__eyebrow"><a href="/ru/blog/">← Блог</a></div>
+
+      <h1 class="article__title">Не просто статистика.</h1>
+
+      <div class="article__meta">
+        <span><strong>10.08.2025</strong></span>
+        <span>4 мин чтения</span>
+        <a class="lang-link" href="/blog/llms-not-just-statistics.html">Read in English →</a>
+      </div>
+
+      <div class="prose">
+
+        <p>Есть мнение, что LLM — это просто продвинутые системы, которые с большой точностью предсказывают наиболее вероятный следующий токен для среднестатистического текста. Я не считаю это правдой.</p>
+
+        <p><strong>2020 — GPT-3</strong> — <a href="https://arxiv.org/abs/2005.14165">модель, способная предсказать следующий токен с хорошей точностью</a>. Это и есть продвинутая статистика.</p>
+
+        <p><strong>2022 — InstructGPT</strong> — <a href="https://arxiv.org/abs/2203.02155">модель, внедрившая RLHF, дообучаясь на реакции людей на ответ, делая его более «приятным»</a>. Эта модель продолжает текст не статистически наиболее вероятно, а так, как этого хотели бы люди.</p>
+
+        <p><strong>2022 — ChatGPT</strong> — <a href="https://www.assemblyai.com/blog/how-chatgpt-actually-works">не просто продолжает текст, а, будучи дообученной на отобранных примерах чатов, продолжая их, отвечает на вопрос пользователя</a>. Тоже статистика, только не всех текстов из интернета, а только наиболее релевантных.</p>
+
+        <p><strong>2022 — PaLM 540B</strong> — <a href="https://arxiv.org/pdf/2201.11903">внедрила Chain-of-Thought prompting (CoT). Модель рекурсивно запускалась, добавляя свои «мысли» в промпт</a>. Обучение всё ещё «статистика», хоть и отборных данных, но, отвечая, модель видит промпт не только от пользователя, но и из своих мыслей, так что её первый выдаваемый пользователю токен — это уже не статистически наиболее вероятный после его вопроса. Это наиболее вероятный после запроса пользователя и мыслей модели, а при не нулевой температуре это разные вещи.</p>
+
+        <p><strong>2025 — Deepseek R1</strong> — <a href="https://arxiv.org/abs/2501.12948">внедрила Reinforcement learning (RL) для обучения «мыслящих» LLM моделей. И это уже совсем не статистика</a>. Модель (после предобучения, как и во всех примерах выше) пытается решать задачу и получает награду за правильные ответы. Таким образом учится мыслить именно своим уникальным образом. Почти все новые модели прошли дообучение с RL.</p>
+
+        <p><strong>2025 — Grok 4 Heavy</strong> — <a href="https://www.datastudios.org/post/grok-4-vs-previous-models-1-1-5-2-3-3-5-full-comparison-of-architecture-capabilities-and-r">запускает несколько агентов параллельно, давая каждому решить задачу самостоятельно. После агенты «обсуждают» ответ и приходят к консенсусному решению</a>. Я не буду объяснять, почему это нечто большее, чем статистика.</p>
+
+        <p>LLM — это не просто продвинутые статистические машины, но <em>были</em> ими в 2022 году. Некоторые люди в их изучении остались там же. И ведь это только часть ключевых открытий в области ИИ.</p>
+
+        <p>А раз аргумент, что LLM — это всего лишь продвинутая статистика, не работает, это возвращает меня к основному вопросу канала: что останавливает их от того, чтобы начать писать тексты с ответами на вопросы, которые ни один человек дать не может, или с самими вопросами, которые ни один человек не догадается задать?</p>
+
+      </div>
+
+      <aside class="post-cta">
+        <span class="post-cta__label">— Консультации</span>
+        Если вы объясняете возможности LLM не-ML-аудитории или руководству и хотите второй взгляд на то, какие формулировки выдерживают эпоху ризонинг-моделей — консультирую. <a href="mailto:apdorodin765@gmail.com">apdorodin765@gmail.com</a>.
+      </aside>
+
+      <nav class="post-nav" aria-label="Навигация по постам">
+        <a class="post-nav__link post-nav__link--prev" href="#" style="pointer-events: none; opacity: 0.4;">
+          <span class="post-nav__label">← Раньше</span>
+          <span class="post-nav__title">(ничего раньше пока нет)</span>
+        </a>
+        <a class="post-nav__link post-nav__link--next" href="prefix-injection-jailbreak.html">
+          <span class="post-nav__label">Позже →</span>
+          <span class="post-nav__title">Префиксная атака</span>
+        </a>
+      </nav>
+
+    </article>
+  </div>
+
+  <div class="blog-container">
+    <footer class="blog-footer">
+      <div><a href="/ru/">← aleksanderborodin.github.io/ru</a></div>
+      <div style="display: flex; gap: 1.25rem;">
+        <a href="https://github.com/aleksanderborodin">GitHub</a>
+        <a href="https://t.me/less_arrogant">Telegram</a>
+        <a href="mailto:apdorodin765@gmail.com">Email</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../../js/common.js"></script>
+</body>
+</html>

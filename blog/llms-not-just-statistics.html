@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f1eb">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+
+  <title>The "LLMs are just statistics" argument is stuck in 2022 — Aleksander Borodin</title>
+  <meta name="description" content="A timeline of architectural and training-recipe changes since 2020 that pushed LLMs past next-token prediction.">
+  <link rel="canonical" href="https://aleksanderborodin.github.io/blog/llms-not-just-statistics.html">
+  <link rel="alternate" hreflang="en" href="https://aleksanderborodin.github.io/blog/llms-not-just-statistics.html">
+  <link rel="alternate" hreflang="ru" href="https://aleksanderborodin.github.io/ru/blog/llms-not-just-statistics.html">
+  <link rel="alternate" hreflang="x-default" href="https://aleksanderborodin.github.io/blog/llms-not-just-statistics.html">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Aleksander Borodin">
+  <meta property="og:title" content="The 'LLMs are just statistics' argument is stuck in 2022">
+  <meta property="og:description" content="A timeline of architectural and training-recipe changes since 2020 that pushed LLMs past next-token prediction.">
+  <meta property="og:url" content="https://aleksanderborodin.github.io/blog/llms-not-just-statistics.html">
+  <meta property="og:image" content="https://aleksanderborodin.github.io/assets/social-card.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ru_RU">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@aleksanderbor">
+  <meta name="twitter:creator" content="@aleksanderbor">
+  <meta name="twitter:title" content="The 'LLMs are just statistics' argument is stuck in 2022">
+  <meta name="twitter:description" content="A timeline of architectural and training-recipe changes since 2020 that pushed LLMs past next-token prediction.">
+  <meta name="twitter:image" content="https://aleksanderborodin.github.io/assets/social-card.webp">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://aleksanderborodin.github.io/blog/llms-not-just-statistics.html",
+    "headline": "The 'LLMs are just statistics' argument is stuck in 2022",
+    "description": "A timeline of architectural and training-recipe changes since 2020 that pushed LLMs past next-token prediction.",
+    "url": "https://aleksanderborodin.github.io/blog/llms-not-just-statistics.html",
+    "datePublished": "2025-08-10",
+    "author": { "@id": "https://aleksanderborodin.github.io/#person" },
+    "publisher": { "@id": "https://aleksanderborodin.github.io/#person" },
+    "inLanguage": "en",
+    "image": "https://aleksanderborodin.github.io/assets/social-card.webp",
+    "isPartOf": { "@type": "Blog", "url": "https://aleksanderborodin.github.io/blog/" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aleksanderborodin.github.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Writing", "item": "https://aleksanderborodin.github.io/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "The 'LLMs are just statistics' argument is stuck in 2022", "item": "https://aleksanderborodin.github.io/blog/llms-not-just-statistics.html" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700&family=Epilogue:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&display=swap">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/blog.css">
+</head>
+<body class="page-blog">
+
+  <nav class="nav">
+    <a href="/" class="nav__logo"><span class="nav__logo-dot"></span><span>AB</span></a>
+    <button class="nav__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav__links">
+      <li><a href="/#scientist" class="nav__link">Science</a></li>
+      <li><a href="/#contributor" class="nav__link">Open Source</a></li>
+      <li><a href="/#professional" class="nav__link">Commercial</a></li>
+      <li><a href="/blog/" class="nav__link" style="color: var(--accent-writer);">Writing</a></li>
+      <li>
+        <div class="lang-toggle">
+          <a class="lang-toggle__btn active" href="/blog/llms-not-just-statistics.html">EN</a>
+          <a class="lang-toggle__btn" href="/ru/blog/llms-not-just-statistics.html">RU</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="article-wrap">
+    <article class="article">
+
+      <div class="article__eyebrow"><a href="/blog/">← Writing</a></div>
+
+      <h1 class="article__title">The <em>"LLMs are just statistics"</em> argument is stuck in 2022.</h1>
+
+      <div class="article__meta">
+        <span><strong>2025-08-10</strong></span>
+        <span>4 min read</span>
+        <a class="lang-link" href="/ru/blog/llms-not-just-statistics.html">Прочитать по-русски →</a>
+      </div>
+
+      <div class="prose">
+
+        <p>There's a claim that LLMs are just advanced systems predicting the most likely next token given average text. I don't buy it.</p>
+
+        <p><strong>2020 — GPT-3.</strong> <a href="https://arxiv.org/abs/2005.14165">A model that predicts the next token with decent accuracy.</a> That's advanced statistics.</p>
+
+        <p><strong>2022 — InstructGPT.</strong> <a href="https://arxiv.org/abs/2203.02155">Introduced RLHF — fine-tuned on human reactions to make responses "nicer".</a> This doesn't continue text statistically — it continues it the way humans prefer.</p>
+
+        <p><strong>2022 — ChatGPT.</strong> <a href="https://www.assemblyai.com/blog/how-chatgpt-actually-works">Not just text continuation — fine-tuned on curated chat examples, so continuing the chat means answering the user's question.</a> Still statistics, but of a curated subset, not the whole internet.</p>
+
+        <p><strong>2022 — PaLM 540B.</strong> <a href="https://arxiv.org/pdf/2201.11903">Introduced Chain-of-Thought prompting (CoT). The model runs recursively, adding its own "thoughts" to the prompt.</a> Still statistical at train time, but at inference the model now sees the user's prompt <em>plus its own thoughts</em> — so the first token it returns is no longer the statistically most-likely continuation of the user's question. It's the most-likely continuation of <em>user-question + model-thoughts</em>, which at non-zero temperature is a different thing.</p>
+
+        <p><strong>2025 — DeepSeek R1.</strong> <a href="https://arxiv.org/abs/2501.12948">Introduced reinforcement learning for training reasoning LLMs. This is no longer statistics.</a> The model (after pretraining, as in all examples above) tries to solve tasks and gets rewarded for correct answers. It learns to reason in its own idiosyncratic way. Almost every new model now goes through RL post-training.</p>
+
+        <p><strong>2025 — Grok 4 Heavy.</strong> <a href="https://www.datastudios.org/post/grok-4-vs-previous-models-1-1-5-2-3-3-5-full-comparison-of-architecture-capabilities-and-r">Runs several agents in parallel, each solving the task independently. The agents then "discuss" and reach consensus.</a> I won't bother explaining why this is more than statistics.</p>
+
+        <p>LLMs aren't just advanced statistical machines. They <em>were</em> in 2022. Some people stopped studying them then. And these are only some of the key discoveries in the field.</p>
+
+        <p>If the "LLMs are just statistics" argument doesn't hold, it brings me back to this channel's main question: what's stopping them from writing texts with answers no human can give, or asking questions no human would think to ask?</p>
+
+      </div>
+
+      <aside class="post-cta">
+        <span class="post-cta__label">— Consulting</span>
+        If you're explaining LLM capability to a non-ML audience or an executive team and want a second read on which framings hold up post-reasoning-models, I consult on this — <a href="mailto:apdorodin765@gmail.com">apdorodin765@gmail.com</a>.
+      </aside>
+
+      <nav class="post-nav" aria-label="Post navigation">
+        <a class="post-nav__link post-nav__link--prev" href="#" style="pointer-events: none; opacity: 0.4;">
+          <span class="post-nav__label">← Earlier</span>
+          <span class="post-nav__title">(nothing older yet)</span>
+        </a>
+        <a class="post-nav__link post-nav__link--next" href="prefix-injection-jailbreak.html">
+          <span class="post-nav__label">Later →</span>
+          <span class="post-nav__title">A psychology trick beats LLM jailbreak defenses</span>
+        </a>
+      </nav>
+
+    </article>
+  </div>
+
+  <div class="blog-container">
+    <footer class="blog-footer">
+      <div><a href="/">← aleksanderborodin.github.io</a></div>
+      <div style="display: flex; gap: 1.25rem;">
+        <a href="https://github.com/aleksanderborodin">GitHub</a>
+        <a href="https://t.me/less_arrogant">Telegram</a>
+        <a href="mailto:apdorodin765@gmail.com">Email</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../js/common.js"></script>
+</body>
+</html>

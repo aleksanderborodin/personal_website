@@ -68,6 +68,72 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aleksanderborodin.github.io/blog/"/>
   </url>
 
+  <!-- EN blog post: llms-not-just-statistics -->
+  <url>
+    <loc>https://aleksanderborodin.github.io/blog/llms-not-just-statistics.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aleksanderborodin.github.io/blog/llms-not-just-statistics.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aleksanderborodin.github.io/ru/blog/llms-not-just-statistics.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aleksanderborodin.github.io/blog/llms-not-just-statistics.html"/>
+  </url>
+
+  <!-- RU blog post: llms-not-just-statistics -->
+  <url>
+    <loc>https://aleksanderborodin.github.io/ru/blog/llms-not-just-statistics.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aleksanderborodin.github.io/blog/llms-not-just-statistics.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aleksanderborodin.github.io/ru/blog/llms-not-just-statistics.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aleksanderborodin.github.io/blog/llms-not-just-statistics.html"/>
+  </url>
+
+  <!-- EN blog post: prefix-injection-jailbreak -->
+  <url>
+    <loc>https://aleksanderborodin.github.io/blog/prefix-injection-jailbreak.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aleksanderborodin.github.io/blog/prefix-injection-jailbreak.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aleksanderborodin.github.io/ru/blog/prefix-injection-jailbreak.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aleksanderborodin.github.io/blog/prefix-injection-jailbreak.html"/>
+  </url>
+
+  <!-- RU blog post: prefix-injection-jailbreak -->
+  <url>
+    <loc>https://aleksanderborodin.github.io/ru/blog/prefix-injection-jailbreak.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aleksanderborodin.github.io/blog/prefix-injection-jailbreak.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aleksanderborodin.github.io/ru/blog/prefix-injection-jailbreak.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aleksanderborodin.github.io/blog/prefix-injection-jailbreak.html"/>
+  </url>
+
+  <!-- EN blog post: llms-trained-to-guess -->
+  <url>
+    <loc>https://aleksanderborodin.github.io/blog/llms-trained-to-guess.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aleksanderborodin.github.io/blog/llms-trained-to-guess.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aleksanderborodin.github.io/ru/blog/llms-trained-to-guess.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aleksanderborodin.github.io/blog/llms-trained-to-guess.html"/>
+  </url>
+
+  <!-- RU blog post: llms-trained-to-guess -->
+  <url>
+    <loc>https://aleksanderborodin.github.io/ru/blog/llms-trained-to-guess.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aleksanderborodin.github.io/blog/llms-trained-to-guess.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aleksanderborodin.github.io/ru/blog/llms-trained-to-guess.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aleksanderborodin.github.io/blog/llms-trained-to-guess.html"/>
+  </url>
+
   <!-- EN blog post: pareto-llm-pricing -->
   <url>
     <loc>https://aleksanderborodin.github.io/blog/pareto-llm-pricing.html</loc>
@@ -88,6 +154,28 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://aleksanderborodin.github.io/blog/pareto-llm-pricing.html"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://aleksanderborodin.github.io/ru/blog/pareto-llm-pricing.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://aleksanderborodin.github.io/blog/pareto-llm-pricing.html"/>
+  </url>
+
+  <!-- EN blog post: cli-vs-mcp -->
+  <url>
+    <loc>https://aleksanderborodin.github.io/blog/cli-vs-mcp.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aleksanderborodin.github.io/blog/cli-vs-mcp.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aleksanderborodin.github.io/ru/blog/cli-vs-mcp.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aleksanderborodin.github.io/blog/cli-vs-mcp.html"/>
+  </url>
+
+  <!-- RU blog post: cli-vs-mcp -->
+  <url>
+    <loc>https://aleksanderborodin.github.io/ru/blog/cli-vs-mcp.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aleksanderborodin.github.io/blog/cli-vs-mcp.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aleksanderborodin.github.io/ru/blog/cli-vs-mcp.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aleksanderborodin.github.io/blog/cli-vs-mcp.html"/>
   </url>
 
 </urlset>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f1eb">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+
+  <title>Agents don't need MCP. They need CLI. — Aleksander Borodin</title>
+  <meta name="description" content="An agent with a shell can use any CLI. MCP was a detour. Why plain command-line tools are the simpler, better default for agentic systems.">
+  <link rel="canonical" href="https://aleksanderborodin.github.io/blog/cli-vs-mcp.html">
+  <link rel="alternate" hreflang="en" href="https://aleksanderborodin.github.io/blog/cli-vs-mcp.html">
+  <link rel="alternate" hreflang="ru" href="https://aleksanderborodin.github.io/ru/blog/cli-vs-mcp.html">
+  <link rel="alternate" hreflang="x-default" href="https://aleksanderborodin.github.io/blog/cli-vs-mcp.html">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Aleksander Borodin">
+  <meta property="og:title" content="Agents don't need MCP. They need CLI.">
+  <meta property="og:description" content="An agent with a shell can use any CLI. MCP was a detour. Why plain command-line is the simpler, better default.">
+  <meta property="og:url" content="https://aleksanderborodin.github.io/blog/cli-vs-mcp.html">
+  <meta property="og:image" content="https://aleksanderborodin.github.io/assets/social-card.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ru_RU">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@aleksanderbor">
+  <meta name="twitter:creator" content="@aleksanderbor">
+  <meta name="twitter:title" content="Agents don't need MCP. They need CLI.">
+  <meta name="twitter:description" content="An agent with a shell can use any CLI. MCP was a detour.">
+  <meta name="twitter:image" content="https://aleksanderborodin.github.io/assets/social-card.webp">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://aleksanderborodin.github.io/blog/cli-vs-mcp.html",
+    "headline": "Agents don't need MCP. They need CLI.",
+    "description": "An agent with a shell can use any CLI. MCP was a detour. Why plain command-line tools are the simpler, better default for agentic systems.",
+    "url": "https://aleksanderborodin.github.io/blog/cli-vs-mcp.html",
+    "datePublished": "2026-03-22",
+    "author": { "@id": "https://aleksanderborodin.github.io/#person" },
+    "publisher": { "@id": "https://aleksanderborodin.github.io/#person" },
+    "inLanguage": "en",
+    "image": "https://aleksanderborodin.github.io/assets/social-card.webp",
+    "isPartOf": { "@type": "Blog", "url": "https://aleksanderborodin.github.io/blog/" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aleksanderborodin.github.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Writing", "item": "https://aleksanderborodin.github.io/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Agents don't need MCP. They need CLI.", "item": "https://aleksanderborodin.github.io/blog/cli-vs-mcp.html" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700&family=Epilogue:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&display=swap">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/blog.css">
+</head>
+<body class="page-blog">
+
+  <nav class="nav">
+    <a href="/" class="nav__logo"><span class="nav__logo-dot"></span><span>AB</span></a>
+    <button class="nav__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav__links">
+      <li><a href="/#scientist" class="nav__link">Science</a></li>
+      <li><a href="/#contributor" class="nav__link">Open Source</a></li>
+      <li><a href="/#professional" class="nav__link">Commercial</a></li>
+      <li><a href="/blog/" class="nav__link" style="color: var(--accent-writer);">Writing</a></li>
+      <li>
+        <div class="lang-toggle">
+          <a class="lang-toggle__btn active" href="/blog/cli-vs-mcp.html">EN</a>
+          <a class="lang-toggle__btn" href="/ru/blog/cli-vs-mcp.html">RU</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="article-wrap">
+    <article class="article">
+
+      <div class="article__eyebrow"><a href="/blog/">← Writing</a></div>
+
+      <h1 class="article__title">Agents don't need MCP. They need <em>CLI</em>.</h1>
+
+      <div class="article__meta">
+        <span><strong>2026-03-22</strong></span>
+        <span>2 min read</span>
+        <a class="lang-link" href="/ru/blog/cli-vs-mcp.html">Прочитать по-русски →</a>
+      </div>
+
+      <div class="prose">
+
+        <p>MCP was everywhere a year ago. Most people still haven't noticed the simple thing: an agent with access to a shell can use any CLI tool just as well.</p>
+
+        <p>Plain CLIs have obvious advantages:</p>
+
+        <ul>
+          <li>Easier to build</li>
+          <li>Transparent and understandable in operation</li>
+          <li>Usable by both agents and humans</li>
+          <li>Thousands already exist for every task</li>
+        </ul>
+
+        <p>Google figured this out — their <a href="https://github.com/googleworkspace/cli">new tool</a> is a CLI, not another MCP server. Released only this month, clearly aimed at agents, but still a CLI.</p>
+
+        <p>Hard numbers on the comparison are thin. Some say <a href="https://portofcontext.com/blog/cli-vs-mcp-vs-code-mode">MCP needs more context on simple tasks and less on complex ones, if the tools are well-wrapped and discoverable</a>. Others say the difference is negligible, and when it isn't, it's because the CLIs weren't adapted for context efficiency. What everyone agrees on: CLI gives the agent the same tools at the same success rate, with far less operational overhead.</p>
+
+        <p>In my projects I'm using CLI.</p>
+
+      </div>
+
+      <aside class="post-cta">
+        <span class="post-cta__label">— Consulting</span>
+        If you're designing a tool layer for an agentic system and want a second opinion on CLI vs MCP vs direct code execution, I consult on this — <a href="mailto:apdorodin765@gmail.com">apdorodin765@gmail.com</a>.
+      </aside>
+
+      <nav class="post-nav" aria-label="Post navigation">
+        <a class="post-nav__link post-nav__link--prev" href="pareto-llm-pricing.html">
+          <span class="post-nav__label">← Earlier</span>
+          <span class="post-nav__title">Most LLMs are strictly dominated</span>
+        </a>
+        <a class="post-nav__link post-nav__link--next" href="#" style="pointer-events: none; opacity: 0.4;">
+          <span class="post-nav__label">Later →</span>
+          <span class="post-nav__title">(nothing newer yet)</span>
+        </a>
+      </nav>
+
+    </article>
+  </div>
+
+  <div class="blog-container">
+    <footer class="blog-footer">
+      <div><a href="/">← aleksanderborodin.github.io</a></div>
+      <div style="display: flex; gap: 1.25rem;">
+        <a href="https://github.com/aleksanderborodin">GitHub</a>
+        <a href="https://t.me/less_arrogant">Telegram</a>
+        <a href="mailto:apdorodin765@gmail.com">Email</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../js/common.js"></script>
+</body>
+</html>

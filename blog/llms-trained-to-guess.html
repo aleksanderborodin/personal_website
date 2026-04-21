@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f1eb">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+
+  <title>LLMs are trained to guess — Aleksander Borodin</title>
+  <meta name="description" content="OpenAI's hallucination research in one sentence: LLMs never say 'I don't know' because post-training never rewards it. And that's fixable cheaply.">
+  <link rel="canonical" href="https://aleksanderborodin.github.io/blog/llms-trained-to-guess.html">
+  <link rel="alternate" hreflang="en" href="https://aleksanderborodin.github.io/blog/llms-trained-to-guess.html">
+  <link rel="alternate" hreflang="ru" href="https://aleksanderborodin.github.io/ru/blog/llms-trained-to-guess.html">
+  <link rel="alternate" hreflang="x-default" href="https://aleksanderborodin.github.io/blog/llms-trained-to-guess.html">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Aleksander Borodin">
+  <meta property="og:title" content="LLMs are trained to guess">
+  <meta property="og:description" content="OpenAI's hallucination paper in one sentence: LLMs are trained to play a guessing game. And that's fixable.">
+  <meta property="og:url" content="https://aleksanderborodin.github.io/blog/llms-trained-to-guess.html">
+  <meta property="og:image" content="https://aleksanderborodin.github.io/assets/social-card.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ru_RU">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@aleksanderbor">
+  <meta name="twitter:creator" content="@aleksanderbor">
+  <meta name="twitter:title" content="LLMs are trained to guess">
+  <meta name="twitter:description" content="OpenAI's hallucination paper in one sentence: LLMs are trained to play a guessing game.">
+  <meta name="twitter:image" content="https://aleksanderborodin.github.io/assets/social-card.webp">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://aleksanderborodin.github.io/blog/llms-trained-to-guess.html",
+    "headline": "LLMs are trained to guess",
+    "description": "OpenAI's hallucination research in one sentence: LLMs never say 'I don't know' because post-training never rewards it.",
+    "url": "https://aleksanderborodin.github.io/blog/llms-trained-to-guess.html",
+    "datePublished": "2025-09-08",
+    "author": { "@id": "https://aleksanderborodin.github.io/#person" },
+    "publisher": { "@id": "https://aleksanderborodin.github.io/#person" },
+    "inLanguage": "en",
+    "image": "https://aleksanderborodin.github.io/assets/social-card.webp",
+    "isPartOf": { "@type": "Blog", "url": "https://aleksanderborodin.github.io/blog/" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aleksanderborodin.github.io/" },
+      { "@type": "ListItem", "position": 2, "name": "Writing", "item": "https://aleksanderborodin.github.io/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "LLMs are trained to guess", "item": "https://aleksanderborodin.github.io/blog/llms-trained-to-guess.html" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700&family=Epilogue:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&display=swap">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/blog.css">
+</head>
+<body class="page-blog">
+
+  <nav class="nav">
+    <a href="/" class="nav__logo"><span class="nav__logo-dot"></span><span>AB</span></a>
+    <button class="nav__hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav__links">
+      <li><a href="/#scientist" class="nav__link">Science</a></li>
+      <li><a href="/#contributor" class="nav__link">Open Source</a></li>
+      <li><a href="/#professional" class="nav__link">Commercial</a></li>
+      <li><a href="/blog/" class="nav__link" style="color: var(--accent-writer);">Writing</a></li>
+      <li>
+        <div class="lang-toggle">
+          <a class="lang-toggle__btn active" href="/blog/llms-trained-to-guess.html">EN</a>
+          <a class="lang-toggle__btn" href="/ru/blog/llms-trained-to-guess.html">RU</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="article-wrap">
+    <article class="article">
+
+      <div class="article__eyebrow"><a href="/blog/">← Writing</a></div>
+
+      <h1 class="article__title">LLMs are trained to <em>guess</em>.</h1>
+
+      <div class="article__meta">
+        <span><strong>2025-09-08</strong></span>
+        <span>3 min read</span>
+        <a class="lang-link" href="/ru/blog/llms-trained-to-guess.html">Прочитать по-русски →</a>
+      </div>
+
+      <div class="prose">
+
+        <p>LLMs hallucinate — they confidently produce wrong answers. They almost never say "I don't know," even when they could. You might think this is a pretraining issue (bad data, underfitting, insufficient examples). In practice, it isn't.</p>
+
+        <p>OpenAI published <a href="https://cdn.openai.com/pdf/d04913be-3f6f-4d2b-b283-ff432ef4aaa5/why-language-models-hallucinate.pdf">research</a> whose core finding collapses to one sentence: <strong>LLMs are trained to play a guessing game.</strong> During post-training, answers get graded for correctness, with no distinction drawn between "I don't know" and a confidently wrong reply. So the model learns to always produce the most plausible-looking answer — sometimes it gets lucky. Like any human taking a multiple-choice test, except the model doesn't know whether it's being evaluated or serving a real user.</p>
+
+        <p>Given this, you can add a post-training stage that penalizes "I don't know" less harshly. You can spin up several confidence-thresholded variants of an existing model by changing only post-training — no retraining from scratch. You can retrofit this onto already-shipped LLMs far cheaper than training a new one. Clean, actionable finding.</p>
+
+        <p>This hints at a broader pattern. Response length might work the same way: it's easier to be correct when the answer is short, and the model learns the minimum verbosity required to pass RL evals — not a bit more, even when the user would want more. You could reward models during RL not only for correctness but for how close their verbosity is to optimal for the question. Other attributes likely deserve the same treatment.</p>
+
+        <p>In classical ML terms:</p>
+
+        <blockquote>Accuracy is a bad metric for LLMs.</blockquote>
+
+        <p>This is only the base case. The paper itself has many more experimental observations on how post-training subtly breaks the model.</p>
+
+      </div>
+
+      <aside class="post-cta">
+        <span class="post-cta__label">— Consulting</span>
+        If you're designing RL rewards or evaluation protocols for LLMs and want a second read on what post-training is actually optimizing for, I consult on this — <a href="mailto:apdorodin765@gmail.com">apdorodin765@gmail.com</a>.
+      </aside>
+
+      <nav class="post-nav" aria-label="Post navigation">
+        <a class="post-nav__link post-nav__link--prev" href="prefix-injection-jailbreak.html">
+          <span class="post-nav__label">← Earlier</span>
+          <span class="post-nav__title">A psychology trick beats LLM jailbreak defenses</span>
+        </a>
+        <a class="post-nav__link post-nav__link--next" href="pareto-llm-pricing.html">
+          <span class="post-nav__label">Later →</span>
+          <span class="post-nav__title">Most LLMs are strictly dominated</span>
+        </a>
+      </nav>
+
+    </article>
+  </div>
+
+  <div class="blog-container">
+    <footer class="blog-footer">
+      <div><a href="/">← aleksanderborodin.github.io</a></div>
+      <div style="display: flex; gap: 1.25rem;">
+        <a href="https://github.com/aleksanderborodin">GitHub</a>
+        <a href="https://t.me/less_arrogant">Telegram</a>
+        <a href="mailto:apdorodin765@gmail.com">Email</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../js/common.js"></script>
+</body>
+</html>

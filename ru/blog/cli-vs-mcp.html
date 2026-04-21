@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f1eb">
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+
+  <title>CLI против MCP — Александр Бородин</title>
+  <meta name="description" content="Агент с shell-доступом умеет пользоваться любым CLI ничуть не хуже MCP. Почему классический command-line — более простой и лучший дефолт для агентных систем.">
+  <link rel="canonical" href="https://aleksanderborodin.github.io/ru/blog/cli-vs-mcp.html">
+  <link rel="alternate" hreflang="en" href="https://aleksanderborodin.github.io/blog/cli-vs-mcp.html">
+  <link rel="alternate" hreflang="ru" href="https://aleksanderborodin.github.io/ru/blog/cli-vs-mcp.html">
+  <link rel="alternate" hreflang="x-default" href="https://aleksanderborodin.github.io/blog/cli-vs-mcp.html">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Александр Бородин">
+  <meta property="og:title" content="CLI против MCP">
+  <meta property="og:description" content="Агент с shell-доступом умеет пользоваться любым CLI ничуть не хуже MCP. Почему CLI — более простой дефолт.">
+  <meta property="og:url" content="https://aleksanderborodin.github.io/ru/blog/cli-vs-mcp.html">
+  <meta property="og:image" content="https://aleksanderborodin.github.io/assets/social-card.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@aleksanderbor">
+  <meta name="twitter:creator" content="@aleksanderbor">
+  <meta name="twitter:title" content="CLI против MCP">
+  <meta name="twitter:description" content="Агент с shell-доступом умеет пользоваться любым CLI ничуть не хуже MCP.">
+  <meta name="twitter:image" content="https://aleksanderborodin.github.io/assets/social-card.webp">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://aleksanderborodin.github.io/ru/blog/cli-vs-mcp.html",
+    "headline": "CLI против MCP",
+    "description": "Агент с shell-доступом умеет пользоваться любым CLI ничуть не хуже MCP. Почему классический command-line — более простой и лучший дефолт для агентных систем.",
+    "url": "https://aleksanderborodin.github.io/ru/blog/cli-vs-mcp.html",
+    "datePublished": "2026-03-22",
+    "author": { "@id": "https://aleksanderborodin.github.io/#person" },
+    "publisher": { "@id": "https://aleksanderborodin.github.io/#person" },
+    "inLanguage": "ru",
+    "image": "https://aleksanderborodin.github.io/assets/social-card.webp",
+    "isPartOf": { "@type": "Blog", "url": "https://aleksanderborodin.github.io/ru/blog/" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://aleksanderborodin.github.io/ru/" },
+      { "@type": "ListItem", "position": 2, "name": "Блог", "item": "https://aleksanderborodin.github.io/ru/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "CLI против MCP", "item": "https://aleksanderborodin.github.io/ru/blog/cli-vs-mcp.html" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700&family=Epilogue:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&display=swap">
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/blog.css">
+</head>
+<body class="page-blog">
+
+  <nav class="nav">
+    <a href="/ru/" class="nav__logo"><span class="nav__logo-dot"></span><span>АБ</span></a>
+    <button class="nav__hamburger" aria-label="Меню"><span></span><span></span><span></span></button>
+    <ul class="nav__links">
+      <li><a href="/ru/#scientist" class="nav__link">Наука</a></li>
+      <li><a href="/ru/#contributor" class="nav__link">Open Source</a></li>
+      <li><a href="/ru/#professional" class="nav__link">Коммерция</a></li>
+      <li><a href="/ru/blog/" class="nav__link" style="color: var(--accent-writer);">Блог</a></li>
+      <li>
+        <div class="lang-toggle">
+          <a class="lang-toggle__btn" href="/blog/cli-vs-mcp.html">EN</a>
+          <a class="lang-toggle__btn active" href="/ru/blog/cli-vs-mcp.html">RU</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="article-wrap">
+    <article class="article">
+
+      <div class="article__eyebrow"><a href="/ru/blog/">← Блог</a></div>
+
+      <h1 class="article__title">CLI против <em>MCP</em>.</h1>
+
+      <div class="article__meta">
+        <span><strong>22.03.2026</strong></span>
+        <span>2 мин чтения</span>
+        <a class="lang-link" href="/blog/cli-vs-mcp.html">Read in English →</a>
+      </div>
+
+      <div class="prose">
+
+        <p>MCP — это было очень модно (где-то год назад). Но многие до сих пор не поняли простую вещь: агент с доступом к командной строке может пользоваться любыми CLI-интерфейсами ничуть не хуже.</p>
+
+        <p>При этом у классических CLI есть очевидные преимущества:</p>
+
+        <ul>
+          <li>Их банально легче разрабатывать</li>
+          <li>Они прозрачнее и понятнее в работе</li>
+          <li>Применяться они могут не только агентами, но и людьми</li>
+          <li>Их уже существует огромное множество под любые задачи</li>
+        </ul>
+
+        <p>В Google это тоже осознали и выкатили <a href="https://github.com/googleworkspace/cli">свой инструмент</a>. Сделан он явно для агентов (его выпустили только в этом месяце), но это именно CLI, а не очередной MCP-сервер.</p>
+
+        <p>Точных фактов по этой теме пока нет. Кто-то говорит, что <a href="https://portofcontext.com/blog/cli-vs-mcp-vs-code-mode">в простых задачах MCP требует больше контекста, а в сложных — меньше, чем CLI, если инструменты грамотно обёрнуты и хорошо обнаруживаются агентом</a>. Кто-то — что этой разницей можно пренебречь, да и вызвана она тем, что не все CLI адаптированы под экономию контекста. Но все согласны, что CLI может дать агенту доступ ко всем тем же инструментам и обеспечить одинаковый процент успеха, при этом будучи куда понятнее для человека и значительно проще в написании и поддержке.</p>
+
+        <p>В моих проектах я буду использовать CLI.</p>
+
+      </div>
+
+      <aside class="post-cta">
+        <span class="post-cta__label">— Консультации</span>
+        Если вы проектируете слой инструментов для агентной системы и хотите второе мнение о выборе CLI / MCP / прямого исполнения кода — консультирую. <a href="mailto:apdorodin765@gmail.com">apdorodin765@gmail.com</a>.
+      </aside>
+
+      <nav class="post-nav" aria-label="Навигация по постам">
+        <a class="post-nav__link post-nav__link--prev" href="pareto-llm-pricing.html">
+          <span class="post-nav__label">← Раньше</span>
+          <span class="post-nav__title">Какие LLM имеют смысл</span>
+        </a>
+        <a class="post-nav__link post-nav__link--next" href="#" style="pointer-events: none; opacity: 0.4;">
+          <span class="post-nav__label">Позже →</span>
+          <span class="post-nav__title">(ничего нового пока)</span>
+        </a>
+      </nav>
+
+    </article>
+  </div>
+
+  <div class="blog-container">
+    <footer class="blog-footer">
+      <div><a href="/ru/">← aleksanderborodin.github.io/ru</a></div>
+      <div style="display: flex; gap: 1.25rem;">
+        <a href="https://github.com/aleksanderborodin">GitHub</a>
+        <a href="https://t.me/less_arrogant">Telegram</a>
+        <a href="mailto:apdorodin765@gmail.com">Email</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../../js/common.js"></script>
+</body>
+</html>

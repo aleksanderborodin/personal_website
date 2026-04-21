@@ -12,14 +12,43 @@
   <link rel="alternate" hreflang="en" href="https://aleksanderborodin.github.io/blog/">
   <link rel="alternate" hreflang="ru" href="https://aleksanderborodin.github.io/ru/blog/">
   <link rel="alternate" hreflang="x-default" href="https://aleksanderborodin.github.io/blog/">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Александр Бородин">
   <meta property="og:url" content="https://aleksanderborodin.github.io/ru/blog/">
   <meta property="og:title" content="Блог — Александр Бородин">
   <meta property="og:description" content="Длинные разборы об LLM, оценке моделей и том, что действительно стоит выкатывать в прод.">
+  <meta property="og:image" content="https://aleksanderborodin.github.io/assets/social-card.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Блог — Александр Бородин. Заметки об LLM, оценке моделей и AI в продакшене.">
   <meta property="og:locale" content="ru_RU">
   <meta property="og:locale:alternate" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@aleksanderbor">
+  <meta name="twitter:creator" content="@aleksanderbor">
+  <meta name="twitter:title" content="Блог — Александр Бородин">
+  <meta name="twitter:description" content="Заметки об оценке LLM, экономике моделей и AI в продакшене.">
+  <meta name="twitter:image" content="https://aleksanderborodin.github.io/assets/social-card.webp">
+
+  <!-- JSON-LD Blog -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": "https://aleksanderborodin.github.io/ru/blog/",
+    "name": "Блог — Александр Бородин",
+    "description": "Длинные разборы об LLM, оценке моделей и том, что действительно стоит выкатывать в прод.",
+    "url": "https://aleksanderborodin.github.io/ru/blog/",
+    "inLanguage": "ru",
+    "author": { "@id": "https://aleksanderborodin.github.io/#person" },
+    "publisher": { "@id": "https://aleksanderborodin.github.io/#person" }
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,7 +93,7 @@
         Длинные разборы: как выбирать модели для продакшена, насколько реалистичен embedded-AI и те тихие углы поведения LLM, которые не ловит ни один бенчмарк. Пишу медленно; обновляю, когда оказался неправ.
       </p>
       <div class="blog-masthead__meta">
-        <span>1 запись · EN + RU</span>
+        <span>5 записей · EN + RU</span>
         <span style="color: var(--accent-writer);">Консультирую по AI-проектам — apdorodin765@gmail.com</span>
       </div>
     </header>
@@ -77,8 +106,17 @@
           <a class="start-here__item" href="pareto-llm-pricing.html">
             <span class="start-here__num">01</span>
             <span class="start-here__text">
-              <strong>Парето-фронт цен на LLM сместился к Haiku 4.5.</strong>
-              <span> — стоимость одного правильного ответа на 12 задачах; почему «самая дешёвая» — обычно не самая дешёвая.</span>
+              <strong>Какие LLM имеют смысл.</strong>
+              <span> — интеллект против цены для сотен моделей; Парето-фронт и четыре модели, которые реально важны.</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a class="start-here__item" href="llms-not-just-statistics.html">
+            <span class="start-here__num">02</span>
+            <span class="start-here__text">
+              <strong>Не просто статистика.</strong>
+              <span> — таймлайн ключевых архитектурных сдвигов, которые вывели LLM за рамки предсказания следующего токена.</span>
             </span>
           </a>
         </li>
@@ -91,13 +129,59 @@
       <li class="year-break"><span>2026</span></li>
 
       <li>
-        <a class="post-entry" href="pareto-llm-pricing.html">
-          <div class="post-entry__date">14 мар &nbsp;· &nbsp;2026</div>
+        <a class="post-entry" href="cli-vs-mcp.html">
+          <div class="post-entry__date">22 мар &nbsp;· &nbsp;2026</div>
           <div class="post-entry__body">
-            <div class="post-entry__title">Парето-фронт цен на LLM сместился к <em>Haiku 4.5</em>.</div>
-            <div class="post-entry__desc">Двенадцать задач продакшен-формы прогоняю на восьми фронтир-моделях, меряю не по бенчмарку, а по стоимости одного правильного ответа. Победитель — не тот, о ком вы подумали.</div>
+            <div class="post-entry__title">CLI против <em>MCP</em>.</div>
+            <div class="post-entry__desc">Агент с доступом к shell умеет пользоваться любым CLI ничуть не хуже MCP. Почему классический command-line — более простой и лучший дефолт для агентных систем.</div>
           </div>
-          <div class="post-entry__meta">12 мин <span class="post-entry__lang-pill post-entry__lang-pill--both">EN · RU</span></div>
+          <div class="post-entry__meta">2 мин <span class="post-entry__lang-pill post-entry__lang-pill--both">EN · RU</span></div>
+        </a>
+      </li>
+
+      <li>
+        <a class="post-entry" href="pareto-llm-pricing.html">
+          <div class="post-entry__date">26 янв &nbsp;· &nbsp;2026</div>
+          <div class="post-entry__body">
+            <div class="post-entry__title">Какие LLM имеют <em>смысл</em>.</div>
+            <div class="post-entry__desc">График интеллект × цена для сотен LLM показывает: большинство моделей бессмысленны. Вот Парето-фронт и четыре модели, которые стоит выбрать.</div>
+          </div>
+          <div class="post-entry__meta">3 мин <span class="post-entry__lang-pill post-entry__lang-pill--both">EN · RU</span></div>
+        </a>
+      </li>
+
+      <li class="year-break"><span>2025</span></li>
+
+      <li>
+        <a class="post-entry" href="llms-trained-to-guess.html">
+          <div class="post-entry__date">08 сен &nbsp;· &nbsp;2025</div>
+          <div class="post-entry__body">
+            <div class="post-entry__title">Угадайка.</div>
+            <div class="post-entry__desc">Исследование OpenAI о галлюцинациях в одну фразу: LLM учат играть в угадайку. И это дёшево чинится.</div>
+          </div>
+          <div class="post-entry__meta">3 мин <span class="post-entry__lang-pill post-entry__lang-pill--both">EN · RU</span></div>
+        </a>
+      </li>
+
+      <li>
+        <a class="post-entry" href="prefix-injection-jailbreak.html">
+          <div class="post-entry__date">14 авг &nbsp;· &nbsp;2025</div>
+          <div class="post-entry__body">
+            <div class="post-entry__title">Префиксная атака.</div>
+            <div class="post-entry__desc">Эксперимент BBC про Choice Blindness, перенесённый в джейлбрейк LLM через префикс-инъекцию. Тест на 20 запросах из MalitiousInstruct.</div>
+          </div>
+          <div class="post-entry__meta">2 мин <span class="post-entry__lang-pill post-entry__lang-pill--both">EN · RU</span></div>
+        </a>
+      </li>
+
+      <li>
+        <a class="post-entry" href="llms-not-just-statistics.html">
+          <div class="post-entry__date">10 авг &nbsp;· &nbsp;2025</div>
+          <div class="post-entry__body">
+            <div class="post-entry__title">Не просто статистика.</div>
+            <div class="post-entry__desc">Таймлайн архитектурных и тренировочных изменений с 2020-го, который вывел LLM за рамки предсказания следующего токена.</div>
+          </div>
+          <div class="post-entry__meta">4 мин <span class="post-entry__lang-pill post-entry__lang-pill--both">EN · RU</span></div>
         </a>
       </li>
 
