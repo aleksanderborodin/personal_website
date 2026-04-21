@@ -73,7 +73,7 @@ const translations = {
     prof_label: "Experience",
 
     prof_job1_title: "Model & Algorithm Developer",
-    prof_job1_company: "Royal Credit Bank (Client Project)",
+    prof_job1_company: "Retail Bank (Client Project)",
     prof_job1_period: "2024 — 2025",
     prof_job1_item1: "Developed and simulated a cash collection optimization algorithm; analysis of historical data projected a 20M RUB annual profit increase.",
     prof_job1_item2: "Engineered a web scraping and analysis system to extract key data from the central bank's website that was unavailable via API.",
@@ -259,7 +259,7 @@ const translations = {
     prof_label: "Опыт работы",
 
     prof_job1_title: "Разработчик моделей и алгоритмов",
-    prof_job1_company: "Роял Кредит Банк (клиентский проект)",
+    prof_job1_company: "Розничный банк (клиентский проект)",
     prof_job1_period: "2024 — 2025",
     prof_job1_item1: "Разработал и смоделировал алгоритм оптимизации инкассации; анализ исторических данных спрогнозировал увеличение годовой прибыли на 20 млн руб.",
     prof_job1_item2: "Создал систему веб-скрапинга и анализа для извлечения ключевых данных с сайта ЦБ РФ, недоступных через API.",
