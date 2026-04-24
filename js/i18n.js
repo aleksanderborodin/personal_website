@@ -14,8 +14,8 @@ const translations = {
     // Landing
     landing_greeting: "Hello, I'm",
     landing_name: "Aleksander Borodin",
-    landing_role: "NLP / AI Developer",
-    landing_intro: "MIPT student blending mathematics, machine learning, and a relentless curiosity for how language models think — and how to break them.",
+    landing_role: "Embedded AI Developer · MIPT",
+    landing_intro: "MIPT student building embedded AI as part of the Applied Math & CS program — with side projects in LLM safety, multi-agent systems, and other things that catch my attention.",
     landing_explore: "Explore my world",
 
     // Portal cards
@@ -201,8 +201,8 @@ const translations = {
     // Landing
     landing_greeting: "Привет, я",
     landing_name: "Александр Бородин",
-    landing_role: "NLP / AI Разработчик",
-    landing_intro: "Студент МФТИ на стыке математики, машинного обучения и неугасимого интереса к тому, как думают языковые модели — и как их взламывать.",
+    landing_role: "Разработчик встроенного ИИ · МФТИ",
+    landing_intro: "Студент МФТИ — разрабатываю встроенные ИИ-системы в рамках учебной программы по прикладной математике, а в свободное время занимаюсь LLM, мульти-агентными системами и другим интересным.",
     landing_explore: "Исследуйте мой мир",
 
     // Portal cards
