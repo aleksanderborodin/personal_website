@@ -182,218 +182,6 @@ body.loaded {
   }
 }
 
-/* --- Portals Section --- */
-.portals {
-  padding: var(--space-xl) 0 var(--space-lg);
-  position: relative;
-}
-
-.portals__label {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  text-align: center;
-  margin-bottom: var(--space-lg);
-  opacity: 0;
-  animation: fadeInUp 0.6s var(--ease-out-expo) 1.2s forwards;
-}
-
-.portals__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-md);
-  position: relative;
-}
-
-/* --- Portal Card --- */
-.portal {
-  position: relative;
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  cursor: pointer;
-  text-decoration: none;
-  color: inherit;
-  display: flex;
-  flex-direction: column;
-  min-height: 420px;
-  padding: var(--space-md);
-  border: 1px solid var(--border-light);
-  background: var(--surface-elevated);
-  transition: transform 0.6s var(--ease-smooth),
-              box-shadow 0.6s ease,
-              border-color 0.4s ease;
-}
-
-.portal:hover {
-  box-shadow: 0 30px 80px rgba(26, 26, 46, 0.12);
-  border-color: transparent;
-}
-
-/* Accent gradient bg on hover */
-.portal__glow {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  z-index: 0;
-  border-radius: var(--radius-xl);
-}
-
-.portal:hover .portal__glow {
-  opacity: 1;
-}
-
-.portal--scientist .portal__glow {
-  background: linear-gradient(135deg, var(--accent-scientist-soft) 0%, transparent 60%);
-}
-
-.portal--contributor .portal__glow {
-  background: linear-gradient(135deg, var(--accent-contributor-soft) 0%, transparent 60%);
-}
-
-.portal--professional .portal__glow {
-  background: linear-gradient(135deg, var(--accent-professional-soft) 0%, transparent 60%);
-}
-
-/* Portal icon */
-.portal__icon {
-  width: 64px;
-  height: 64px;
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: var(--space-md);
-  position: relative;
-  z-index: 1;
-  transition: transform 0.5s var(--ease-out-back);
-  font-size: 28px;
-}
-
-.portal:hover .portal__icon {
-  transform: scale(1.15) rotate(-3deg);
-}
-
-.portal--scientist .portal__icon {
-  background: var(--accent-scientist-soft);
-  color: var(--accent-scientist);
-}
-
-.portal--contributor .portal__icon {
-  background: var(--accent-contributor-soft);
-  color: var(--accent-contributor);
-}
-
-.portal--professional .portal__icon {
-  background: var(--accent-professional-soft);
-  color: var(--accent-professional);
-}
-
-/* Portal number */
-.portal__number {
-  position: absolute;
-  top: var(--space-md);
-  right: var(--space-md);
-  font-family: var(--font-heading);
-  font-size: 5rem;
-  font-weight: 800;
-  line-height: 1;
-  opacity: 0.04;
-  z-index: 0;
-  transition: opacity 0.4s ease;
-}
-
-.portal:hover .portal__number {
-  opacity: 0.08;
-}
-
-/* Portal content */
-.portal__content {
-  position: relative;
-  z-index: 1;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.portal__title {
-  font-size: var(--step-2);
-  font-weight: 800;
-  margin-bottom: 0.5rem;
-  transition: color 0.3s ease;
-}
-
-.portal--scientist:hover .portal__title { color: var(--accent-scientist); }
-.portal--contributor:hover .portal__title { color: var(--accent-contributor); }
-.portal--professional:hover .portal__title { color: var(--accent-professional); }
-
-.portal__desc {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: var(--text-secondary);
-  flex: 1;
-}
-
-/* Portal CTA */
-.portal__cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: var(--space-md);
-  font-weight: 700;
-  font-size: 0.9rem;
-  letter-spacing: 0.02em;
-  transition: gap 0.4s var(--ease-out-expo);
-}
-
-.portal--scientist .portal__cta { color: var(--accent-scientist); }
-.portal--contributor .portal__cta { color: var(--accent-contributor); }
-.portal--professional .portal__cta { color: var(--accent-professional); }
-
-.portal:hover .portal__cta {
-  gap: 14px;
-}
-
-.portal__cta-arrow {
-  transition: transform 0.4s var(--ease-out-expo);
-  font-size: 1.2rem;
-}
-
-.portal:hover .portal__cta-arrow {
-  transform: translateX(4px);
-}
-
-/* Diagonal decorative line across portal */
-.portal__diagonal {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 120%;
-  height: 40%;
-  z-index: 0;
-  opacity: 0.03;
-  transition: opacity 0.4s ease;
-}
-
-.portal:hover .portal__diagonal {
-  opacity: 0.06;
-}
-
-.portal--scientist .portal__diagonal {
-  background: linear-gradient(135deg, transparent 40%, var(--accent-scientist) 100%);
-}
-
-.portal--contributor .portal__diagonal {
-  background: linear-gradient(135deg, transparent 40%, var(--accent-contributor) 100%);
-}
-
-.portal--professional .portal__diagonal {
-  background: linear-gradient(135deg, transparent 40%, var(--accent-professional) 100%);
-}
-
 /* --- Landing Divider --- */
 .landing-divider {
   position: relative;
@@ -442,34 +230,6 @@ body.loaded {
   height: 20px;
 }
 
-/* --- Preview Sections (inline on landing) --- */
-.section--preview {
-  padding: var(--space-xl) 0;
-}
-
-.section--preview .section-header__label::before {
-  background: var(--accent, var(--accent-scientist));
-}
-
-.section--scientist-preview .card__tag {
-  background: var(--accent-scientist-soft);
-  color: var(--accent-scientist);
-}
-
-.section--scientist-preview .card__link {
-  color: var(--accent-scientist);
-}
-
-.section--scientist-preview .section-header__label {
-  color: var(--accent-scientist);
-}
-
-.preview-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-md);
-}
-
 /* ============================================
    RESPONSIVE — Desktop-first, mobile-friendly
    ============================================ */
@@ -488,23 +248,6 @@ body.loaded {
 
   .hero__name {
     font-size: clamp(2.8rem, 5vw, 5.5rem);
-  }
-}
-
-@media (max-width: 1024px) {
-  .portals__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .portal {
-    min-height: 340px;
-  }
-
-  .portal:last-child {
-    grid-column: 1 / -1;
-    max-width: 500px;
-    margin: 0 auto;
-    width: 100%;
   }
 }
 
@@ -559,25 +302,6 @@ body.loaded {
     transform: translateX(-50%);
     bottom: -16px;
   }
-
-  .portals__grid {
-    grid-template-columns: 1fr;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-
-  .portal {
-    min-height: 280px;
-  }
-
-  .portal:last-child {
-    grid-column: auto;
-    max-width: none;
-  }
-
-  .preview-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* Phones */
@@ -589,27 +313,5 @@ body.loaded {
   .hero__photo {
     width: 160px;
     height: 160px;
-  }
-
-  .portal {
-    min-height: 240px;
-    padding: var(--space-sm);
-  }
-
-  .portal__icon {
-    width: 48px;
-    height: 48px;
-  }
-
-  .portal__number {
-    font-size: 3rem;
-  }
-
-  .portals {
-    padding: var(--space-lg) 0 var(--space-md);
-  }
-
-  .section--preview {
-    padding: var(--space-lg) 0;
   }
 }
