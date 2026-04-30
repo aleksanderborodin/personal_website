@@ -174,7 +174,7 @@ const translations = {
 
     // Contributor page
     contrib_hero_title: "Open Source",
-    contrib_hero_desc: "Создание инструментов, решающих реальные проблемы — и их открытие для мира. От мульти-агентных ИИ-систем до браузерных расширений, защищающих пользователей.",
+    contrib_hero_desc: "Мои открытые проекты.",
     contrib_label: "Проекты",
 
     contrib_proj1_title: "Idea Evolve",
@@ -195,7 +195,7 @@ const translations = {
 
     // Professional page
     prof_hero_title: "Профессиональный опыт",
-    prof_hero_desc: "Измеримое влияние на бизнес через ИИ, оптимизацию и инженерию данных. Создание систем, генерирующих реальную ценность.",
+    prof_hero_desc: "Чем занимался и с какими результатами.",
     prof_label: "Опыт работы",
 
     prof_job1_title: "Разработчик моделей и алгоритмов",
