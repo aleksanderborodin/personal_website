@@ -6,7 +6,9 @@
   <meta name="theme-color" content="#f5f1eb">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
-  <!-- Language auto-redirect: send Russian-language browsers to /ru/ -->
+  <!-- Language auto-redirect: send Russian-language browsers to /ru/.
+       HOMEPAGE ONLY — do not copy this script onto deeper pages: it always
+       redirects to /ru/ root and would drop the deep URL. -->
   <script>
     (function() {
       var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
@@ -58,6 +60,7 @@
   <meta name="twitter:title" content="Aleksander Borodin — Embedded AI Developer · MIPT">
   <meta name="twitter:description" content="MIPT student and embedded AI developer. Side projects in LLM safety, multi-agent systems, and open-source AI tools.">
   <meta name="twitter:image" content="https://aleksanderborodin.github.io/assets/social-card.webp">
+  <meta name="twitter:image:alt" content="Aleksander Borodin — Embedded AI Developer, MIPT. Research, Open Source.">
 
   <!-- JSON-LD Person schema -->
   <script type="application/ld+json">
